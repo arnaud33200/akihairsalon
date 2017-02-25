@@ -1,0 +1,113 @@
+// https://www.facebook.com/akiimamurahairstylist/
+// https://www-1555b.bookeo.com/bookeo/b_akiimamura_start.html
+
+var tabledatajson = '[\
+{\
+    "title": "Hair Cut",\
+    "content": [\
+        { "name": "Women\'s Hair Cut", "price": "$56.50", "button-link": "http" },\
+        { "name": "Men\'s Hair Cut", "price": "$45.20", "button-link": "http" },\
+        { "name": "Men\'s Hair Cut Trim - Within 3 weeks", "price": "$39.55", "button-link": "http" },\
+        { "name": "Kids Hair Cut", "price": "", "button-link": "http" }\
+    ]\
+},\
+{\
+    "title": "Hair Cut And Roots Touch Up Colour",\
+    "content": [\
+        { "name": "Men\'s Hair Cut And Roots Touch Up Colour (Within 5Weeks)", "price": "$101.70", "button-link": "http" },\
+        { "name": "Women\'s Hair Cut and Roots Touch Up Colour (within 5 weeks)", "price": "$113", "button-link": "http" },\
+        { "name": "Root Color Touch Up", "price": "$67.80", "button-link": "http" }\
+    ]\
+},\
+{\
+    "title": "One Process Colour",\
+    "content": [\
+        { "name": "One Process Colour - Short", "price": "$73.45", "button-link": "http" },\
+        { "name": "One Process Colour - Midium", "price": "$84.75", "button-link": "http" },\
+        { "name": "One Process Color - Long", "price": "$96.05", "button-link": "http" }\
+    ]\
+},\
+{\
+    "title": "Double Process Colour",\
+    "content": [\
+        { "name": "Double Process Color - Short", "price": "$169.50", "button-link": "http" },\
+        { "name": "Double Process Colour - Midium", "price": "$192.10", "button-link": "http" },\
+        { "name": "Double Process Colour - Long", "price": "$226", "button-link": "http" }\
+    ]\
+},\
+{\
+    "title": "Ombre Balayage Colour",\
+    "content": [\
+        { "name": "Ombre/ Balayage Colour (Light brown)", "price": "$195", "button-link": "http" },\
+        { "name": "Ombre/ Balayage Colour (Blonde, Gray, Ash)", "price": "$226", "button-link": "http" }\
+    ]\
+},\
+{\
+    "title": "Full Highlights",\
+    "content": [\
+        { "name": "Full Highlights -Short", "price": "$135.60", "button-http": "link" },\
+        { "name": "Full Highlights - Midium", "price": "$160", "button-link": "http" },\
+        { "name": "Full Highlights - Long", "price": "$180.80", "button-link": "http" }\
+    ]\
+},\
+{\
+    "title": "Other",\
+    "content": [\
+        { "name": "Updo", "price": "$67.80", "button-link": "http" },\
+        { "name": "Shampoo Blowdry", "price": "$45.20", "button-link": "http" }\
+    ]\
+}\
+]';
+
+function initPriceTable(jsonData) {
+		var divPriceTable = document.getElementById("price-table");
+		divPriceTable.innerHTML = "";
+
+		var collapsibleUl = document.createElement("ul");
+		collapsibleUl.setAttribute("class", "collapsible");
+		collapsibleUl.setAttribute("data-collapsible", "expandable");
+		divPriceTable.appendChild(collapsibleUl);
+
+		jsonData.forEach(function(headerObject) {
+			title = headerObject.title;
+			var liElement = document.createElement("li");
+			var headerElement = document.createElement("div");
+			headerElement.setAttribute("class", "collapsible-header active");
+			liElement.appendChild(headerElement);
+			headerElement.innerHTML = title;
+
+			var bodyElement = document.createElement("div");
+			bodyElement.setAttribute("class", "collapsible-body");
+			bodyElement.setAttribute("style", "padding-left: 10px; padding-right: 15px;");
+
+			var tableElement = document.createElement("table");
+			var tableBodyElement = document.createElement("tbody");
+			tableElement.appendChild(tableBodyElement);
+			bodyElement.appendChild(tableElement);
+
+			headerObject.content.forEach(function(contentBody) {
+				var trElement = document.createElement("tr");
+				tableBodyElement.appendChild(trElement);
+// ----- NAME
+				var tdName = document.createElement("td");
+				tdName.setAttribute("width", "70%");
+				tdName.innerHTML = contentBody.name;
+				trElement.appendChild(tdName);
+// ----- PRICE
+				var tdPrice = document.createElement("td");
+				tdPrice.setAttribute("width", "30%");
+				tdPrice.innerHTML = contentBody.price;
+				trElement.appendChild(tdPrice);
+// ----- BUTTON
+				var tdButton = document.createElement("td");
+				tdButton.setAttribute("width", "50");
+				tdButton.innerHTML = "button";
+				trElement.appendChild(tdButton);
+
+				tableBodyElement.appendChild(trElement);				
+			});
+
+			liElement.appendChild(bodyElement);
+			collapsibleUl.appendChild(liElement);
+		});
+	}

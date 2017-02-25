@@ -1,0 +1,311 @@
+<html>
+<head>
+
+	<title>Aki's Hairsalon</title>
+
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<script type="text/javascript" src="data/price.json"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMAxQHRREX3zmqNnk5_UFxDomZbgIqpjA&callback=initMap" async defer></script>
+
+</head>
+
+<body onload="">
+
+	
+
+	<style type="text/css">
+
+	@font-face {
+		font-family: 'myfont';
+		/*src: url('fonts/Darleston.otf'); ok */
+		/*src: url('fonts/Miama.ttf');*/
+		/*src: url('fonts/MrsSaintDelafield-Regular.ttf'); ok*/
+		/*src: url('fonts/Distant_Stroke.otf'); ok */ 
+		src: url('fonts/Distant_Stroke_Medium.otf');
+
+	}
+
+	</style>
+
+	<script>
+
+	function init() {
+		var mydata = JSON.parse(tabledatajson);
+		// initPriceTable(mydata);
+	}
+	window.onload = init;
+
+	function initMap() {
+		var uluru = {lat: 43.652181, lng: -79.393060};
+
+		var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 15,
+			center: uluru
+		});
+	}
+
+</script>
+
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.js"></script>
+
+<nav style="position: fixed; z-index: 1000;">
+	<div class="nav-wrapper z-depth-1">
+		<a href="#" class="brand-logo right" style="font-family: 'myFont';font-size: 40px; right: 1.5rem;">Aki's Hairsalon</a>
+		<ul id="nav-mobile" class="left">
+			<li><a href="#">About</a></li>
+			<li><a href="#">Price</a></li>
+			<li><a href="#">Location</a></li>
+		</ul>
+	</div>
+</nav>
+
+
+
+<div class="row" style="padding-top: 80px"><div class="col s12 m8 offset-m2">
+
+	<!-- <div style> -->
+	<!-- </div> -->
+
+	<h1 style="font-family: 'myfont';text-align: center;font-size: 90px;">Aki's Hairsalon</h1>
+
+	<div class="divider"></div>
+	<div class="section">
+		<h5>About</h5>
+
+		<div style="min-height: 320px;">
+
+			<div class="" style="width:150px; float: right; margin-right:20px"> 					
+				<div class="card small">
+					<div class="card-image waves-effect waves-block waves-light">
+						<img class="activator" src="images/profile.jpg">
+					</div>
+					<div class="card-content">
+						<span class="card-title activator grey-text text-darken-4">About Aki</span>
+					</div>
+					<div class="card-reveal">
+						<span class="card-title grey-text text-darken-4">Aki<i class="material-icons right">close</i></span>
+						<p>Here is some more information about this product that is only revealed once clicked on.</p>
+					</div>
+				</div>
+			</div>
+
+
+			<div class=""  style="margin-right: 220px;"> 
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut laoreet erat justo, at mollis orci maximus nec. Quisque imperdiet rhonmus cursus vitae dui a condimentum. Aenean aliquam urna sed nisi accumsan accumsan. Aliquam maximus arcu varius enim feugiat, sit amet eleifend nulla cursus. Quisque tempus lorem id interdum elementum.</p>
+
+				<p>Nullam nec venenatis turpis, sit amet congue justo. Nam aliquet nunc convallis dui varius, et elementum metus feugiat. Sed sed metus lacusnc interdum, in sodales est sodales. Mauris laoreet dictum fermentum. Nullam orci libero, tempor ut luctus eu, blandit quis orci.</p>
+			</div>
+
+
+		</div>
+
+
+
+	</div>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+	<div class="divider"></div>
+	<div class="section">
+		<h5>Price</h5>
+
+		<!-- this is generatred with the price.json script -->
+
+		<div id="price-table"><ul class="collapsible" data-collapsible="expandable"><li><div class="collapsible-header active">Hair Cut</div>
+		<div class="collapsible-body" style="padding-left: 10px; padding-right: 15px;">
+			<table><tbody>
+
+		<tr>
+		<td width="70%">Women's Hair Cut</td>
+		<td width="30%">$56.50</td>
+		<td width="50"><a class="waves-effect waves-light btn">Book</a></td>
+	</tr>
+
+		<tr>
+		<td width="70%">Men's Hair Cut</td>
+		<td width="30%">$45.20</td>
+		<td width="50"><a class="waves-effect waves-light btn">Book</a></td>
+	</tr>
+
+		<tr>
+		<td width="70%">Men's Hair Cut Trim - Within 3 weeks</td>
+		<td width="30%">$39.55</td>
+		<td width="50"><a class="waves-effect waves-light btn">Book</a></td>
+	</tr>
+
+		<tr>
+		<td>Kids Hair Cut</td>
+		<td></td>
+		<td width="50"><a class="waves-effect waves-light btn">Book</a></td>
+	</tr>
+	</tbody></table>
+</div></li><li><div class="collapsible-header active">Hair Cut And Roots Touch Up Colour</div>
+	<div class="collapsible-body" style="padding-left: 10px; padding-right: 15px;">
+		<table><tbody>
+
+		<tr>
+		<td width="70%">Men's Hair Cut And Roots Touch Up Colour (Within 5Weeks)</td>
+		<td width="30%">$101.70</td>
+		<td width="50"><a class="waves-effect waves-light btn">Book</a></td>
+	</tr>
+
+		<tr>
+		<td width="70%">Women's Hair Cut and Roots Touch Up Colour (within 5 weeks)</td>
+		<td width="30%">$113</td>
+		<td width="50"><a class="waves-effect waves-light btn">Book</a></td>
+	</tr>
+
+		<tr>
+		<td width="70%">Root Color Touch Up</td>
+		<td width="30%">$67.80</td>
+		<td width="50"><a class="waves-effect waves-light btn">Book</a></td>
+	</tr>
+	</tbody></table>
+</div></li><li><div class="collapsible-header active">One Process Colour</div>
+	<div class="collapsible-body" style="padding-left: 10px; padding-right: 15px;">
+		<table><tbody>
+
+		<tr>
+		<td width="70%">One Process Colour - Short</td>
+		<td width="30%">$73.45</td>
+		<td width="50"><a class="waves-effect waves-light btn">Book</a></td>
+	</tr>
+
+		<tr>
+		<td width="70%">One Process Colour - Midium</td>
+		<td width="30%">$84.75</td>
+		<td width="50"><a class="waves-effect waves-light btn">Book</a></td>
+	</tr>
+
+		<tr>
+		<td width="70%">One Process Color - Long</td>
+		<td width="30%">$96.05</td>
+		<td width="50"><a class="waves-effect waves-light btn">Book</a></td>
+	</tr>
+	</tbody></table>
+</div></li><li><div class="collapsible-header active">Double Process Colour</div>
+	<div class="collapsible-body" style="padding-left: 10px; padding-right: 15px;">
+		<table><tbody>
+
+		<tr>
+		<td width="70%">Double Process Color - Short</td>
+		<td width="30%">$169.50</td>
+		<td width="50"><a class="waves-effect waves-light btn">Book</a></td>
+	</tr>
+
+		<tr>
+		<td width="70%">Double Process Colour - Midium</td>
+		<td width="30%">$192.10</td>
+		<td width="50"><a class="waves-effect waves-light btn">Book</a></td>
+	</tr>
+
+		<tr>
+		<td width="70%">Double Process Colour - Long</td>
+		<td width="30%">$226</td>
+		<td width="50"><a class="waves-effect waves-light btn">Book</a></td>
+	</tr>
+	</tbody></table>
+</div></li><li><div class="collapsible-header active">Ombre Balayage Colour</div>
+	<div class="collapsible-body" style="padding-left: 10px; padding-right: 15px;">
+		<table><tbody>
+
+		<tr>
+		<td width="70%">Ombre/ Balayage Colour (Light brown)</td>
+		<td width="30%">$195</td>
+		<td width="50"><a class="waves-effect waves-light btn">Book</a></td>
+	</tr>
+
+		<tr>
+		<td width="70%">Ombre/ Balayage Colour (Blonde, Gray, Ash)</td>
+		<td width="30%">$226</td>
+		<td width="50"><a class="waves-effect waves-light btn">Book</a></td>
+	</tr>
+	</tbody></table>
+</div></li><li><div class="collapsible-header active">Full Highlights</div>
+	<div class="collapsible-body" style="padding-left: 10px; padding-right: 15px;">
+		<table><tbody>
+
+		<tr>
+		<td width="70%">Full Highlights -Short</td>
+		<td width="30%">$135.60</td>
+		<td width="50"><a class="waves-effect waves-light btn">Book</a></td>
+	</tr>
+
+		<tr>
+		<td width="70%">Full Highlights - Midium</td>
+		<td width="30%">$160</td>
+		<td width="50"><a class="waves-effect waves-light btn">Book</a></td>
+	</tr>
+
+		<tr>
+		<td width="70%">Full Highlights - Long</td>
+		<td width="30%">$180.80</td>
+		<td width="50"><a class="waves-effect waves-light btn">Book</a></td>
+	</tr>
+	</tbody></table>
+</div></li><li><div class="collapsible-header active">Other</div>
+	<div class="collapsible-body" style="padding-left: 10px; padding-right: 15px;">
+		<table><tbody>
+
+		<tr>
+		<td width="70%">Updo</td>
+		<td width="30%">$67.80</td>
+		<td width="50"><a class="waves-effect waves-light btn">Book</a></td>
+	</tr>
+
+		<tr>
+		<td width="70%">Shampoo Blowdry</td>
+		<td width="30%">$45.20</td>
+		<td width="50"><a class="waves-effect waves-light btn">Book</a></td>
+	</tr>
+	</tbody></table>
+</div></li></ul></div>
+		
+		<div class="divider"></div>
+		<div class="section">
+			<h5>Location</h5>
+
+			<div class="row" style="height: 300px;">
+
+				<div id="map" class="col s7" style="height:100%;"></div>
+
+				<div class="col s5 lime lighten-4" style="height:100%;">
+
+					<div style="">
+					</div>
+
+					<a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Make Reservation</a>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+
+
+</div></div>	
+
+</body>
+
+<footer class="page-footer">
+	<div class="container">
+		<div class="row">
+
+		</div>
+	</div>
+
+	<div class="footer-copyright">
+		<div class="container">
+			2014 Copyright Text
+			<a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+		</div>
+	</div>
+</footer>
+
+</html>
