@@ -34,6 +34,14 @@
 	function init() {
 		var mydata = JSON.parse(tabledatajson);
 		// initPriceTable(mydata);
+
+		$(document).on('scroll', function() {
+		    if ($(this).scrollTop() >= $('#about-section').position().top - 150) {
+		        $("#top-navigation-bar").slideDown();
+		    } else {
+		    	$("#top-navigation-bar").slideUp();
+		    }
+		})
 	}
 	window.onload = init;
 
@@ -51,7 +59,7 @@
 <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.js"></script>
 
-<nav style="position: fixed; z-index: 1000;">
+<nav id="top-navigation-bar" style="position: fixed; z-index: 1000; display: none;">
 	<div class="nav-wrapper z-depth-1">
 		<a href="#" class="brand-logo right" style="font-family: 'myFont';font-size: 40px; right: 1.5rem;">Aki's Hairsalon</a>
 		<ul id="nav-mobile" class="left">
@@ -80,7 +88,7 @@
 	</div>
 
 	<div class="divider"></div>
-	<div class="section">
+	<div id="about-section" class="section">
 		<h5>About</h5>
 
 		<div style="min-height: 320px;">
