@@ -32,7 +32,7 @@
 	<script>
 
 	function init() {
-		var mydata = JSON.parse(tabledatajson);
+		// var mydata = JSON.parse(tabledatajson);
 		// initPriceTable(mydata);
 
 		$(document).on('scroll', function() {
@@ -60,14 +60,25 @@
 <script type="text/javascript" src="js/materialize.js"></script>
 
 <nav id="top-navigation-bar" style="position: fixed; z-index: 1000; display: none;">
-	<div class="nav-wrapper z-depth-1">
-		<a href="#" class="brand-logo right" style="font-family: 'myFont';font-size: 40px; right: 1.5rem;">Aki's Hairsalon</a>
+	<div class="nav-wrapper white z-depth-1">
+		<a href="#" class="brand-logo right black-text" style="font-family: 'myFont';font-size: 40px; right: 1.5rem;">Aki's Hairsalon</a>
 		<ul id="nav-mobile" class="left">
-			<li><a href="#">About</a></li>
-			<li><a href="#">Price</a></li>
-			<li><a href="#">Location</a></li>
+			<li><a class="black-text" href="#about-section">About</a></li>
+			<li><a class="black-text" href="#price-section">Price</a></li>
+			<li><a class="black-text" href="#location-section">Location</a></li>
 		</ul>
+
+		<!-- <div style="padding-top: 16px;">
+		<ul class="tabs tabs-transparent">
+        <li class="tab"><a href="#about-section">About</a></li>
+        <li class="tab"><a href="#price-section">Price</a></li>
+        <li class="tab"><a href="#location-section">Location</a></li>
+      </ul>
+      </div> -->
 	</div>
+	<div class="nav-content">
+      
+    </div>
 </nav>
 
 
@@ -87,32 +98,32 @@
 		</div>
 	</div>
 
+	<!-- BUTTON FOR SECTION NAVIGATION -->
+
+	<!-- <div class="row">
+      <div class="col m4 s4 l3 blue" style="text-align: center;"><a class="waves-effect waves-light btn">button</a></div>
+      <div class="col m4 s4 red" style="text-align: center;"><a class="waves-effect waves-light btn">button</a></div>
+      <div class="col m4 s4 yellow" style="text-align: center;"><a class="waves-effect waves-light btn">button</a></div>
+    </div> -->
+
 	<div class="divider"></div>
 	<div id="about-section" class="section">
 		<h5>About</h5>
 
 		<div style="min-height: 320px;">
 
-			<div class="" style="width:150px; float: right; margin-right:20px"> 					
-				<div class="card small">
-					<div class="card-image waves-effect waves-block waves-light">
-						<img class="activator" src="images/profile.jpg">
-					</div>
-					<div class="card-content">
-						<span class="card-title activator grey-text text-darken-4">About Aki</span>
-					</div>
-					<div class="card-reveal">
-						<span class="card-title grey-text text-darken-4">Aki<i class="material-icons right">close</i></span>
-						<p>Here is some more information about this product that is only revealed once clicked on.</p>
-					</div>
-				</div>
+			<div class="z-depth-2" style="width:150px; height:200px; float: right; margin-right:20px"> 			
+				<img src="images/profile2.jpg" style="width:100%; height:100%;">
 			</div>
 
 
 			<div class=""  style="margin-right: 220px;"> 
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut laoreet erat justo, at mollis orci maximus nec. Quisque imperdiet rhonmus cursus vitae dui a condimentum. Aenean aliquam urna sed nisi accumsan accumsan. Aliquam maximus arcu varius enim feugiat, sit amet eleifend nulla cursus. Quisque tempus lorem id interdum elementum.</p>
 
-				<p>Nullam nec venenatis turpis, sit amet congue justo. Nam aliquet nunc convallis dui varius, et elementum metus feugiat. Sed sed metus lacusnc interdum, in sodales est sodales. Mauris laoreet dictum fermentum. Nullam orci libero, tempor ut luctus eu, blandit quis orci.</p>
+				<!-- <p>Aki Imamura</p> -->
+				
+				<p>Aki is a creative stylist who passion for hair began in 2004 in Japan, where she has both trained and taught styling.</p>
+				
+				<p>She came to Toronto to expand her repertoire of styles and to bring her own creative style to Canada.  After a few years of working in a salon in Toronto, she ventured out on her own and started her own business.  She prides herself on providing a specialized cut for each of her clients and cares immensely about details and texture, and it shows! Her focus is on having all her customers to look their best.  She thanks all her past clients for their business and is always open to receiving new ones.</p>
 			</div>
 
 
@@ -124,7 +135,7 @@
 
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-	<div class="divider"></div>
+	<div id="price-section" class="divider"></div>
 	<div class="section">
 		<h5>Price</h5>
 
@@ -280,7 +291,7 @@
 	</tbody></table>
 </div></li></ul></div>
 		
-		<div class="divider"></div>
+		<div id="location-section" class="divider"></div>
 		<div class="section">
 			<h5>Location</h5>
 
@@ -308,7 +319,7 @@
 
 </body>
 
-<footer class="page-footer">
+<footer class="page-footer white">
 	<div class="container">
 		<div class="row">
 
