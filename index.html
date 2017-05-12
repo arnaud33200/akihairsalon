@@ -31,6 +31,16 @@
 
 	<script>
 
+	function windowResizeEvent() {
+		if ($(window).width() < 600) {
+			$("#desktop-menu-buttons").hide();
+			$("#mobile-menu-buttons").show();
+		} else {
+			$("#desktop-menu-buttons").show();
+			$("#mobile-menu-buttons").hide();
+		}
+	}
+
 	function init() {
 		// var mydata = JSON.parse(tabledatajson);
 		// initPriceTable(mydata);
@@ -42,7 +52,29 @@
 		    	$("#top-navigation-bar").slideUp();
 		    }
 		})
+
+		window.onresize = function(event) {
+			windowResizeEvent();
+		};
+
+		windowResizeEvent();
+
+	 // Initialize collapse button
+	  $(".button-collapse").sideNav();
+
+	  $('.button-collapse').sideNav({
+	      menuWidth: 300, // Default is 300
+	      edge: 'left', // Choose the horizontal origin
+	      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+	      draggable: true // Choose whether you can drag to open on touch screens
+	  });
+
+	  $("#menu-button").click(function() {
+	  		$('.button-collapse').sideNav('show');
+		});
+
 	}
+
 	window.onload = init;
 
 	function initMap() {
@@ -62,26 +94,41 @@
 <nav id="top-navigation-bar" style="position: fixed; z-index: 1000; display: none;">
 	<div class="nav-wrapper white ">
 		<a href="#" class="brand-logo right black-text" style="font-family: 'myFont';font-size: 40px; right: 1.5rem;">Aki's Hairsalon</a>
-		<ul id="nav-mobile" class="left">
-			<li><a class="black-text" href="#about-section">About</a></li>
-			<li><a class="black-text" href="#price-section">Price</a></li>
-			<li><a class="black-text" href="#location-section">Location</a></li>
-		</ul>
 
-		<!-- <div style="padding-top: 16px;">
-		<ul class="tabs tabs-transparent">
-        <li class="tab"><a href="#about-section">About</a></li>
-        <li class="tab"><a href="#price-section">Price</a></li>
-        <li class="tab"><a href="#location-section">Location</a></li>
-      </ul>
-      </div> -->
+		<div id="desktop-menu-buttons">
+			<ul id="nav-mobile" class="left">
+					<li>
+					<a class="black-text" href="#about-section">About</a>
+					</li>
+					<li><a class="black-text" href="#price-section">Price</a></li>
+					<li><a class="black-text" href="#location-section">Location</a></li>
+				</ul>
+		</div>
+				
+		<div id="mobile-menu-buttons">
+			<ul id="nav-mobile" class="left">
+				<li>
+					<a id="menu-button" data-activates="slide-out" class="black-text"><i class="material-icons">menu</i></a>
+				</li>
+			</ul>
+		</div>
+
 	</div>
 	<div class="nav-content">
       
     </div>
 </nav>
 
+	<ul id="slide-out" class="side-nav" style="z-index: 2000;">
+	    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+	    <li><a href="#!">Second Link</a></li>
+	    <li><div class="divider"></div></li>
+	    <li><a class="subheader">Subheader</a></li>
+	    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+	</ul>
 
+	<a href="#" data-activates="slide-out" class="black-text button-collapse"></a>
+	
 
 <div class="row" style="padding-top: 40px"><div class="col s10 l8 offset-l2 offset-s1">
 
