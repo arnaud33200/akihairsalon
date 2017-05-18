@@ -26,7 +26,7 @@ th.price-title {
     padding-right: 10px;
     font-style: italic;
     font-weight: 400;
-    width:300px;
+    width:75%;
 }
 
 th.price-detail {
@@ -38,7 +38,7 @@ th.price-detail {
 
 th.price-value {
 	/*background: #c6f3d2;*/
-	/*width:65%;*/
+	width:60px;
 }
 
 td, th {
