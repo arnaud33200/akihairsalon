@@ -15,6 +15,36 @@
     opacity: 0.5;
 }
 
+table.price-table {
+	/*background: gray;*/
+	/*width:100%;*/
+}
+
+th.price-title {
+    /*background: #c6c6f3;	*/
+	text-align: right;
+    padding-right: 10px;
+    font-style: italic;
+    font-weight: 400;
+    width:300px;
+}
+
+th.price-detail {
+	font-weight: 300;
+    padding-top: 0px;
+    font-size: small;
+    text-align: right;
+}
+
+th.price-value {
+	/*background: #c6f3d2;*/
+	/*width:65%;*/
+}
+
+td, th {
+	padding: 5px 5px;
+}
+
 .icn-social.facebook { background-image: url(../images/icn-facebook.png); }
 .icn-social.instagram { background-image: url(../images/icn-instagram.png); }
 .icn-social.bookeo { background-image: url(../images/icn-bookeo.png); }
