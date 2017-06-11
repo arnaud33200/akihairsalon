@@ -8,6 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 	<script type="text/javascript" src="data/price.json"></script>
+	<script type="text/javascript" src="js/navigation.js"></script>
+
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMAxQHRREX3zmqNnk5_UFxDomZbgIqpjA&callback=initMap" async defer></script>
 
 	<link type="text/css" rel="stylesheet" href="css/style.css"/>
@@ -33,12 +35,21 @@
 	<script>
 
 	function windowResizeEvent() {
+
+	// display or hide the mobile side bar
 		if ($(window).width() < 600) {
 			$("#desktop-menu-buttons").hide();
 			$("#mobile-menu-buttons").show();
 		} else {
 			$("#desktop-menu-buttons").show();
 			$("#mobile-menu-buttons").hide();
+		}
+
+	// adjust the font of main title
+		if ($(window).width() < 470) {
+			$("#main-title").css('font-size', '60px');
+		} else {
+			$("#main-title").css('font-size', '100px');
 		}
 	}
 
@@ -61,10 +72,8 @@
 		windowResizeEvent();
 
 	 // Initialize collapse button
-	  $(".button-collapse").sideNav();
-
 	  $('.button-collapse').sideNav({
-	      menuWidth: 300, // Default is 300
+	      menuWidth: 200, // Default is 300
 	      edge: 'left', // Choose the horizontal origin
 	      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
 	      draggable: true // Choose whether you can drag to open on touch screens
@@ -98,11 +107,10 @@
 
 		<div id="desktop-menu-buttons">
 			<ul id="nav-mobile" class="left">
-					<li>
-					<a class="black-text" href="#about-section">About</a>
-					</li>
-					<li><a class="black-text" href="#price-section">Price</a></li>
-					<li><a class="black-text" href="#location-section">Location</a></li>
+					<li><a class="black-text" onclick="scrollToAbout()">About</a></li>
+					<li><a class="black-text" onclick="scrollToPrice()">Price</a></li>
+					<li><a class="black-text" onclick="scrollToHours()">Hours</a></li>
+					<li><a class="black-text" onclick="scrollToLocation()">Location</a></li>
 				</ul>
 		</div>
 				
@@ -122,23 +130,25 @@
 
 	<!-- Side Out Menu -->
 
-	<ul id="slide-out" class="side-nav" style="z-index: 2000;">
-	    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-	    <li><a href="#!">Second Link</a></li>
-	    <li><div class="divider"></div></li>
-	    <li><a class="subheader">Subheader</a></li>
-	    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+	<ul id="slide-out" class="side-nav" style="">
+	    <li style="margin-top: 60px;">
+	    	<a class="waves-effect" onclick="scrollToAbout()">About</a>
+	    </li>
+	    <!-- <li><div class="divider"></div></li> -->
+	    <li><a class="waves-effect" onclick="scrollToPrice()">Price</a></li>
+	    <li><a class="waves-effect" onclick="scrollToHours()">Hours</a></li>
+	    <li><a class="waves-effect" onclick="scrollTLocation()">Location</a></li>
 	</ul>
 
 	<a href="#" data-activates="slide-out" class="black-text button-collapse"></a>
 	
 
-<div class="row" style="padding-top: 40px"><div class="col s12 m8 offset-m2">
+<div class="row" style="padding-top: 40px;"><div class="col s12 m8 offset-m2">
 
 	<!-- <div style> -->
 	<!-- </div> -->
 
-	<h1 style="font-family: 'myfont';text-align: center;font-size: 100px; ">Aki Imamura</h1>
+	<h1 id="main-title" style="font-family: 'myfont';text-align: center;font-size: 100px;">Aki Imamura</h1>
 
 	<div style="text-align: center;">
 		<div class="social-icn-group">
@@ -150,19 +160,28 @@
 
 	<!-- BUTTON FOR SECTION NAVIGATION -->
 
-	<!-- <div class="row">
-      <div class="col m4 s4 l3 blue" style="text-align: center;"><a class="waves-effect waves-light btn">button</a></div>
-      <div class="col m4 s4 red" style="text-align: center;"><a class="waves-effect waves-light btn">button</a></div>
-      <div class="col m4 s4 yellow" style="text-align: center;"><a class="waves-effect waves-light btn">button</a></div>
-    </div> -->
+	<div class="row">
+		<div class="col m3 s6" style="margin-bottom: 10px; text-align: center;">
+      	<a class="waves-effect waves-light btn  grey darken-1" onclick="scrollToAbout()" style="width: 100%;">About</a>
+      </div>
+		
+      <div class="col m3 s6" style="margin-bottom: 10px; text-align: center;">
+      	<a class="waves-effect waves-light btn  grey darken-1" onclick="scrollToPrice()" style="width: 100%;">Price</a>
+      </div>
+      <div class="col m3 s6" style="margin-bottom: 10px; text-align: center;">
+      	<a class="waves-effect waves-light btn  grey darken-1" onclick="scrollToHours()" style="width: 100%;">Hours</a>
+      </div>
+      <div class="col m3 s6" style="margin-bottom: 10px; text-align: center;">
+      	<a class="waves-effect waves-light btn  grey darken-1" onclick="scrollToLocation()" style="width: 100%;">Location</a>
+      </div>
+    </div>
 
 	<div class="divider"></div>
 	<div id="about-section" class="section">
-		<h3>About</h3>
+		<h4>About</h4>
 
 		<div class="row">
 			<div class="col push-m8 m4 s12" style="text-align: center">
-
 				<div class="z-depth-2" style="width:150px; height:200px; display: inline-block;"> 			
 				<img src="images/profile2.jpg" style="width:100%; height:100%;">
 				</div>
@@ -184,7 +203,7 @@
 
 	<div id="price-section" class="divider"></div>
 	<div class="section">
-		<h3>Price</h3>
+		<h4>Price</h4>
 
 			<div class="row">
 				<div class="col m5 s12">
@@ -221,19 +240,19 @@
 
 	</div>
 
-		<div id="location-section" class="divider"></div>
+		<div id="hours-section" class="divider"></div>
 		<div class="section">
-			<h3>Hours</h3>
+			<h4>Hours</h4>
 			<ul>
 				<li>Wednesday to Friday (12pm to 8pm) </li>
 				<li>Saturday (10am to 6pm)</li>
 			</ul>
-			<p>¡ùHours may vary. Please inquire with the stylist.</p>
+			<p>Â¡Ã¹Hours may vary. Please inquire with the stylist.</p>
 		</div>
 		
 		<div id="location-section" class="divider"></div>
 		<div class="section">
-			<h3>Location</h3>
+			<h4>Location</h4>
 
 			<div class="row">
 
@@ -248,8 +267,7 @@
 
 					<div >
 
-						<a class="waves-effect waves-light btn black text-white" style="display: inherit;">
-							<!-- <i class="material-icons left">cloud</i> -->
+						<a class="waves-effect waves-light btn grey darken-1 text-white" style="display: inherit;">
 							Make Reservation</a>
 					</div>
 				</div>
@@ -262,7 +280,7 @@
 
 	<div id="Cancellation-policy-section" class="divider"></div>
 		<div class="section">
-			<h3>Cancellation policy</h3>
+			<h4>Cancellation policy</h4>
 			 <blockquote>
 			<p>Out of courtesy, all appointment have a minimum 24-hours cancellation policy.</p>
 			<p>Customers who are late for their appointment may lose their reservation.  Please be on time.</p>
@@ -274,7 +292,7 @@
 
 </body>
 
-<footer class="page-footer white">
+<!-- <footer class="page-footer white">
 	<div class="container">
 		<div class="row">
 
@@ -286,6 +304,6 @@
 			<a class="grey-text text-lighten-4 right" href="#!">More Links</a>
 		</div>
 	</div>
-</footer>
+</footer> -->
 
 </html>
