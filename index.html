@@ -9,6 +9,7 @@
 
 	<script type="text/javascript" src="data/price.json"></script>
 	<script type="text/javascript" src="js/navigation.js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
 
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMAxQHRREX3zmqNnk5_UFxDomZbgIqpjA&callback=initMap" async defer></script>
 
@@ -88,12 +89,23 @@
 	window.onload = init;
 
 	function initMap() {
-		var uluru = {lat: 43.652181, lng: -79.393060};
+		
+		var position = {lat: 43.655239, lng: -79.380248};
+		var positionMap = {lat: 43.655805, lng: -79.380559};
 
 		var map = new google.maps.Map(document.getElementById('map'), {
-			zoom: 15,
-			center: uluru
+			zoom: 17,
+			center: positionMap
 		});
+
+		// map.setOptions({styles: styles['default']});
+		map.setOptions({styles: styles['hide']});
+
+		var marker = new google.maps.Marker({
+          position: position,
+          map: map,
+          title: 'Hello World!'
+        });
 	}
 
 </script>
