@@ -1,3 +1,5 @@
+var color1 = '#9e9e9e';
+
 var styles = {
   default: null,
   hide: [
