@@ -45,6 +45,14 @@ td, th {
 	padding: 5px 5px;
 }
 
+p {
+    display: block;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
 .icn-social.facebook { background-image: url(../images/icn-facebook.png); }
 .icn-social.instagram { background-image: url(../images/icn-instagram.png); }
 .icn-social.bookeo { background-image: url(../images/icn-bookeo.png); }
