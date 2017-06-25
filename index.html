@@ -2,16 +2,15 @@
 <head>
 
 	<title>Aki's Hairsalon</title>
+	<link rel="shortcut icon" href="images/tabicon.png">
 
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-	<script type="text/javascript" src="data/price.json"></script>
+	<!-- <script type="text/javascript" src="data/price.json"></script> -->
 	<script type="text/javascript" src="js/navigation.js"></script>
 	<script type="text/javascript" src="js/map.js"></script>
-
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMAxQHRREX3zmqNnk5_UFxDomZbgIqpjA&callback=initMap" async defer></script>
 
 	<link type="text/css" rel="stylesheet" href="css/style.css"/>
 
@@ -89,9 +88,10 @@
 	window.onload = init;
 
 	function initMap() {
-		
-		var position = {lat: 43.655239, lng: -79.380248};
-		var positionMap = {lat: 43.655805, lng: -79.380559};
+		var latlng = new google.maps.LatLng(39.305, -76.617);
+
+		var position = new google.maps.LatLng(43.655239, -79.380248);
+		var positionMap = new google.maps.LatLng(43.655805, -79.380559);
 
 		var map = new google.maps.Map(document.getElementById('map'), {
 			zoom: 17,
@@ -151,11 +151,11 @@
 	    
 	    <li><a class="waves-effect white-text" onclick="scrollToPrice()">Price</a></li>
 	    <li><a class="waves-effect white-text" onclick="scrollToHours()">Hours</a></li>
-	    <li><a class="waves-effect white-text" onclick="scrollTLocation()">Location</a></li>
+	    <li><a class="waves-effect white-text" onclick="scrollToLocation()">Location</a></li>
 	    <li><div class="divider"></div></li>
 	    <li><a class="waves-effect white-text" onclick="openFacebook()">Facebook</a></li>
 	    <li><a class="waves-effect white-text" onclick="openInstagram()">Instagram</a></li>
-	    <li><a class="waves-effect white-text" onclick="openBookeo()">Bookeo</a></li>
+	    <li><a class="waves-effect white-text" onclick="openBookeo()">Online Booking</a></li>
 	</ul>
 
 	<a href="#" data-activates="slide-out" class="black-text button-collapse"></a>
@@ -213,9 +213,13 @@
 			</div>
 
 			<div class="col m4 s12" style="text-align: center">
-				<div class="z-depth-2" style="width:200px; height:200px; display: inline-block;"> 			
-				<img src="images/profile3.jpg" style="width:100%; height:100%;">
+
+				<div class="z-depth-2" style="width:100%; height:200px; display: inline-block; background-image: url('images/longProfile2.jpg'); background-repeat: no-repeat; background-attachment: inherit; background-position: center; min-width: 200px;border-radius: 10px;"> 			
 				</div>
+
+				<!-- <div class="z-depth-2" style="width:200px; height:200px; display: inline-block;"> 			
+				<img src="images/longProfile1.jpg" style="width:100%; height:100%;">
+				</div> -->
 
 			</div>
 
@@ -230,7 +234,7 @@
 		<h4>Price</h4>
 
 			<div class="row">
-				<div class="col m5 s12">
+				<div class="col m6 s12">
 
 					<h5>CUT</h5>
 					<table class="price-table">
@@ -248,7 +252,7 @@
 
 				</div>
 
-				<div class="col offset-m2 m5 s12">
+				<div class="col m6 s12">
 
 				<h5>COLOURING </h5>
 				<table class="price-table">
@@ -264,7 +268,7 @@
 		</div>
 
 		<div align="center">
-		<a class="waves-effect waves-light btn grey-text text-darken-3 lime accent-2" style="margin-top: 30px; margin-bottom: 30px;" onclick="openBookeo()">
+		<a class="waves-effect waves-light btn grey-text text-darken-3 lime accent-2" style="margin-top: 20px; margin-bottom: 30px;" onclick="openBookeo()">
 		See More Price
 		</a>
 
@@ -274,10 +278,10 @@
 		<div class="section">
 			<h4>Hours</h4>
 			<ul>
-				<li>Wednesday to Friday (12pm to 8pm) </li>
-				<li>Saturday (10am to 6pm)</li>
+				<li style="list-style-type: circle;">Wednesday to Friday (12pm to 8pm) </li>
+				<li style="list-style-type: circle;">Saturday (10am to 6pm)</li>
 			</ul>
-			<p>*Hours may vary. Please inquire with the stylist.</p>
+			<p style=" margin-left: 30px; color: #b1b1b1; font-style: italic;">Hours may vary. Please inquire with the stylist.</p>
 		</div>
 		
 		<div id="location-section" class="divider"></div>
@@ -289,10 +293,12 @@
 				<div class="col push-l7 l5 s12" style="margin-bottom: 40px;">
 
 					<div style="">
-						<p>261A Yonge St., Unit 2F (Spellbound Hair) </p>
-						<p>- Located right next to the Ed Mirvish Theatre.</p>
-						<p>- TTC accessible.  Only a short walk from Dundas Station.</p>
-						<p>- Easy access to public parking.</p>
+						<p>261A Yonge St., Unit 2F (Spellbound Hair)</p>
+						<ul>
+							<li style="list-style-type: circle;">Located right next to the Ed Mirvish Theatre.</li>
+							<li style="list-style-type: circle;">TTC accessible.  Only a short walk from Dundas Station.</li>
+							<li style="list-style-type: circle;">Easy access to public parking.</li>
+						</ul>
 					</div>
 
 					<div align="center">
@@ -304,6 +310,8 @@
 				</div>
 
 				<div id="map" class="col pull-l5 l7 s12" style="height:300px;"></div>
+				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMAxQHRREX3zmqNnk5_UFxDomZbgIqpjA&callback=initMap" async defer></script>
+				
 			</div>
 		</div>
 	

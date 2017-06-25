@@ -18,31 +18,61 @@
 table.price-table {
 	/*background: gray;*/
 	/*width:100%;*/
+	table-layout: fixed;
 }
 
-th.price-title {
-    /*background: #c6c6f3;	*/
-	text-align: right;
+.price-title {
+        /*background: #c6c6f3;*/
+    text-align: right;
     padding-right: 10px;
     font-style: italic;
     font-weight: 400;
-    width:75%;
+    width: 65%;
+    max-width: 250px;
+    word-wrap: break-word;
+    float: left;
+
+    font-size: 14px;
+    color: #676767;
+    /* min-width: 150px; */
 }
 
-th.price-detail {
+.price-detail {
 	font-weight: 300;
     padding-top: 0px;
     font-size: small;
     text-align: right;
+    clear: left;
+    float: left;
+    width: 60%;
+    max-width: 250px;
+
+    color: #afafaf;
 }
 
-th.price-value {
+.price-value {
 	/*background: #c6f3d2;*/
-	width:60px;
+    width: 35%;
+    /*min-width: 70px;*/
+    float: left;
+
+    font-size: medium;
+    font-style: normal;
+        font-weight: bold;
+    color: -internal-quirk-inherit;
 }
 
 td, th {
 	padding: 5px 5px;
+}
+
+ul {
+	list-style-position: inside;
+	margin-left: 10px;
+}
+
+li.dotList {
+	list-style-type: circle;
 }
 
 p {
