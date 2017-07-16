@@ -1,7 +1,7 @@
 <html prefix="og: http://ogp.me/ns#">
 <head>
 
-	<title>Aki's Hairsalon</title>
+	<title>Aki Imamura</title>
 	<link rel="shortcut icon" href="images/tabicon.png">
 
 	<meta property="og:url" content="images/profile3.jpg"/>
@@ -42,6 +42,9 @@
 		}
 
 	</style>
+
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.js"></script>
 
 	<script>
 
@@ -115,14 +118,36 @@ function init() {
 		var marker = new google.maps.Marker({
 			position: position,
 			map: map,
-			title: 'Hello World!'
+			title: 'Aki Imamura',
+			url: "https://www.google.ca/maps/place/Spellbound+Hair+Design/@43.6552099,-79.3806099,19z/data=!3m1!4b1!4m13!1m7!3m6!1s0x89d4cb34cc750291:0x6a6290b625523ec!2s261+Yonge+St,+Toronto,+ON+M5B+1N8!3b1!8m2!3d43.6552065!4d-79.3800818!3m4!1s0x89d4cb34cb307e9f:0x9633d51054ca1009!8m2!3d43.6552089!4d-79.3800627"
 		});
+
+		google.maps.event.addListener(marker, 'click', function() {
+			openUrl(this.url);
+    	});
 	}
+
+	$(document).ready(function() {
+    	// the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    	$('#modal1').modal();
+    });
 
 </script>
 
-<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/materialize.js"></script>
+<script type="application/ld+json">
+{
+  "@type": "Hairstylist",
+  "url": "http://aki-imamura.com/",
+  "name": "Aki Imamura",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-647-381-1245",
+    "contactType": "Customer service"
+  }
+}
+</script>
+
+<!-- <a class="btn-floating btn-large waves-effect waves-light black" style="position: fixed; bottom: 20px; right: 20px;"><i class="material-icons">add</i></a> -->
 
 <nav id="top-navigation-bar" style="position: fixed; z-index: 1000; display: none;">
 	<div class="nav-wrapper blue-grey darken-3">
@@ -135,6 +160,7 @@ function init() {
 				<li><a class="white-text" onclick="scrollToPrice()">Price</a></li>
 				<li><a class="white-text" onclick="scrollToHours()">Hours</a></li>
 				<li><a class="white-text" onclick="scrollToLocation()">Location</a></li>
+				<li><a class="white-text" onclick="scrollToContact()">Contact</a></li>
 			</ul>
 		</div>
 		
@@ -163,6 +189,7 @@ function init() {
 	<li><a class="waves-effect white-text" onclick="scrollToPrice()">Price</a></li>
 	<li><a class="waves-effect white-text" onclick="scrollToHours()">Hours</a></li>
 	<li><a class="waves-effect white-text" onclick="scrollToLocation()">Location</a></li>
+	<li><a class="waves-effect white-text" onclick="scrollToContact()">Contact</a></li>
 	<li><div class="divider"></div></li>
 	<li><a class="waves-effect white-text" onclick="openFacebook()">Facebook</a></li>
 	<li><a class="waves-effect white-text" onclick="openInstagram()">Instagram</a></li>
@@ -206,6 +233,9 @@ function init() {
 			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToLocation()" style="width: 100%;">Location</a>
 			<!-- <a class="waves-effect waves-light btn  grey darken-1" onclick="scrollToLocation()" style="width: 100%;">Location</a> -->
 		</div>
+		<!-- <div class="col s6 offset-s3" align="center" style="margin-bottom: 10px; text-align: center;">
+			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToContact()" style="width: 100%;">Contact</a>
+		</div> -->
 	</div>
 
 <!-- 
@@ -213,25 +243,25 @@ function init() {
 ##################################################################### 
 -->
 
-	<div class="divider"></div>
-	<div id="about-section" class="section">
-		<h4>About</h4>
+<div class="divider"></div>
+<div id="about-section" class="section">
+	<h4>About</h4>
 
-		<div class="row">
-			
-			<div class="col m8 s12">
+	<div class="row">
 
-				<p>Aki is a creative stylist who passion for hair began in 2004 in Japan, where she has both trained and taught styling.</p>
-				
-				<p>She came to Toronto to expand her repertoire of styles and to bring her own creative style to Canada.  After a few years of working in a salon in Toronto, she ventured out on her own and started her own business.  She prides herself on providing a specialized cut for each of her clients and cares immensely about details and texture, and it shows! Her focus is on having all her customers to look their best.  She thanks all her past clients for their business and is always open to receiving new ones.</p>
+		<div class="col m8 s12">
 
+			<p>Aki is a creative stylist who passion for hair began in 2004 in Japan, where she has both trained and taught styling.</p>
+
+			<p>She came to Toronto to expand her repertoire of styles and to bring her own creative style to Canada.  After a few years of working in a salon in Toronto, she ventured out on her own and started her own business.  She prides herself on providing a specialized cut for each of her clients and cares immensely about details and texture, and it shows! Her focus is on having all her customers to look their best.  She thanks all her past clients for their business and is always open to receiving new ones.</p>
+
+		</div>
+
+		<div class="col m4 s12" style="text-align: center">
+
+			<div class="z-depth-2" style="width:100%; height:200px; display: inline-block; background-image: url('images/longProfile2.jpg'); background-repeat: no-repeat; background-attachment: inherit; background-position: center; min-width: 200px;border-radius: 2px;">	
 			</div>
-
-			<div class="col m4 s12" style="text-align: center">
-
-				<div class="z-depth-2" style="width:100%; height:200px; display: inline-block; background-image: url('images/longProfile2.jpg'); background-repeat: no-repeat; background-attachment: inherit; background-position: center; min-width: 200px;border-radius: 10px;">	
-				</div>
-			</div>
+		</div>
 
 				<!-- <div class="z-depth-2" style="width:200px; height:200px; display: inline-block;"> 			
 				<img src="images/longProfile1.jpg" style="width:100%; height:100%;">
@@ -248,94 +278,95 @@ function init() {
 ##################################################################### 
 -->
 
-	<div id="price-section" class="divider"></div>
-	<div class="section">
-		<h4>Price</h4>
+<div id="price-section" class="divider"></div>
+<div class="section">
+	<h4>Price</h4>
 
-		<div class="row">
-			<div class="col m6 s12">
+	<div class="row">
+		<div class="col m6 s12">
 
-				<h5>CUT</h5>
-				<table class="price-table">
-					<tr><th class="price-title">Women</th><th class="price-value">50</th></tr>
-					<tr><th class="price-title">Men</th><th class="price-value">35</th></tr>
-					<tr><th class="price-detail">(Within 3 weeks + side shaving)</th></tr>
-					<tr><th class="price-title">Bangs</th><th class="price-value">10 - 15</th></tr>
-				</table>
+			<h5>CUT</h5>
+			<table class="price-table">			
+				<tr><th class="price-title">Women's Hair Cut</th><th class="price-value">50</th></tr>
+				<tr><th class="price-title">Men's Hair Cut</th><th class="price-value">40</th></tr>
+				<tr><th class="price-title">Men's side shaving cut</th><th class="price-value">35</th></tr>
+				<tr><th class="price-detail">(within 3 weeks)</th></tr>
+				<tr><th class="price-title">Bangs' Hair Cut</th><th class="price-value">10 - 15</th></tr>
+			</table>
 
-				<h5>STYLING</h5>
-				<table class="price-table">
-					<tr><th class="price-title">Shampoo and blow dry</th><th class="price-value">40</th></tr>
-					<tr><th class="price-title">Up do</th><th class="price-value">65</th></tr>
-				</table>
+			<h5>STYLING</h5>
+			<table class="price-table">
+				<tr><th class="price-title">Shampoo and blow dry</th><th class="price-value">40</th></tr>
+				<tr><th class="price-title">Up do</th><th class="price-value">65</th></tr>
+			</table>
 
-			</div>
-
-			<div class="col m6 s12">
-
-				<h5>COLOURING </h5>
-				<table class="price-table">
-					<tr><th class="price-title">Roots touch up</th><th class="price-value">65</th></tr>
-					<tr><th class="price-detail">(within 4 weeks)</th></tr>
-					<tr><th class="price-title">Single process	From</th><th class="price-value">70</th></tr>
-					<tr><th class="price-title">Double process	From</th><th class="price-value">150</th></tr>
-					<tr><th class="price-title">Full highlights	From</th><th class="price-value">130</th></tr>
-					<tr><th class="price-title">Ombre/ Balayage</th><th class="price-value">from 180</th></tr>
-					<tr><th class="price-detail">*(Multi process) Inquire within</th></tr>
-				</table>
-			</div>
 		</div>
 
-		<div align="center">
-			<a class="waves-effect waves-light btn grey-text text-darken-3 lime accent-2" style="margin-top: 20px; margin-bottom: 30px;" onclick="openBookeo()">
-				See More Price
-			</a>
+		<div class="col m6 s12">
 
+			<h5>COLOURING </h5>
+			<table class="price-table">
+				<tr><th class="price-title">Roots touch up</th><th class="price-value">65</th></tr>
+				<tr><th class="price-detail">(within 4 weeks)</th></tr>
+				<tr><th class="price-title">Single process</th><th class="price-value">70~</th></tr>
+				<tr><th class="price-title">Double process</th><th class="price-value">150~</th></tr>
+				<tr><th class="price-title">Full highlights</th><th class="price-value">130~</th></tr>
+				<tr><th class="price-title">Ombre/ Balayage</th><th class="price-value">180~</th></tr>
+				<tr><th class="price-detail">*(Multi process) Inquire within</th></tr>
+			</table>
 		</div>
 	</div>
+
+	<div align="center">
+		<a class="waves-effect waves-light btn grey-text text-darken-3 lime accent-2" style="margin-top: 20px; margin-bottom: 30px;" onclick="openBookeo()">
+			See More Price
+		</a>
+
+	</div>
+</div>
 
 <!-- 
 ##### HOURS 
 ##################################################################### 
 -->
 
-	<div id="hours-section" class="divider"></div>
-	<div class="section">
-		<h4>Hours</h4>
-		<ul>
-			<li style="list-style-type: circle;">Wednesday to Friday (12pm to 8pm) </li>
-			<li style="list-style-type: circle;">Saturday (10am to 6pm)</li>
-		</ul>
-		<p style=" margin-left: 30px; color: #b1b1b1; font-style: italic;">Hours may vary. Please inquire with the stylist.</p>
-	</div>
+<div id="hours-section" class="divider"></div>
+<div class="section">
+	<h4>Hours</h4>
+	<ul>
+		<li style="list-style-type: circle;">Wednesday to Friday (12pm to 8pm) </li>
+		<li style="list-style-type: circle;">Saturday (10am to 6pm)</li>
+	</ul>
+	<p style=" margin-left: 30px; color: #b1b1b1; font-style: italic;">Hours may vary. Please inquire with the stylist.</p>
+</div>
 
 <!-- 
 ##### LOCATION
 ##################################################################### 
 -->
 
-	<div id="location-section" class="divider"></div>
-	<div class="section">
-		<h4>Location</h4>
+<div id="location-section" class="divider"></div>
+<div class="section">
+	<h4>Location</h4>
 
-		<div class="row">
+	<div class="row">
 
-			<div class="col push-l7 l5 s12" style="margin-bottom: 40px;">
+		<div class="col push-l7 l5 s12" style="margin-bottom: 40px;">
 
-				<div style="">
-					<p>261A Yonge St., Unit 2F (Spellbound Hair)</p>
-					<ul>
-						<li style="list-style-type: circle;">Located right next to the Ed Mirvish Theatre.</li>
-						<li style="list-style-type: circle;">TTC accessible.  Only a short walk from Dundas Station.</li>
-						<li style="list-style-type: circle;">Easy access to public parking.</li>
-					</ul>
-				</div>
+			<div style="">
+				<p>261A Yonge St., Unit 2F (Spellbound Hair)</p>
+				<ul>
+					<li style="list-style-type: circle;">Located right next to the Ed Mirvish Theatre.</li>
+					<li style="list-style-type: circle;">TTC accessible.  Only a short walk from Dundas Station.</li>
+					<li style="list-style-type: circle;">Easy access to public parking.</li>
+				</ul>
+			</div>
 
-				<div align="center">
+			<div align="center">
 
-					<a class="waves-effect waves-light btn grey-text text-darken-3 lime accent-2" onclick="openBookeo()" style="display: inherit;     width: 250px;">
-						<!-- <a class="waves-effect waves-light btn grey darken-1 text-white" style="display: inherit;"> -->
-						Make Reservation</a>
+				<a class="waves-effect waves-light btn grey-text text-darken-3 lime accent-2" onclick="openBookeo()" style="display: inherit;     width: 250px;">
+					<!-- <a class="waves-effect waves-light btn grey darken-1 text-white" style="display: inherit;"> -->
+					Make Reservation</a>
 				</div>
 			</div>
 
@@ -347,25 +378,87 @@ function init() {
 
 	</div>
 
+	<!-- 
+##### CONTACT
+##################################################################### 		
+-->
+
+<div id="contact-section" class="divider"></div>
+<div class="section">
+	<h4>Contact</h4>
+
+	 <ul>
+
+      <li><div class="valign-center"><i class="smaller material-icons">perm_phone_msg</i><span>(647) 381 - 1245 (text)</span></div></li>
+	<li><div class="valign-center"><i class="smaller material-icons">email</i><span>akiimamura1021@gmail.com<span></div></li>
+    </ul>
+
+
+	
+
+	<!-- <a class="waves-effect waves-light btn" href="#modal1">Send Message</a> -->
+
+	<!-- Modal Structure -->
+	<div id="modal1" class="modal modal-fixed-footer">
+		<div class="modal-content">
+		<h5>Send Message</h5>
+
+		<!-- 
+		a way to send message without server
+		https://github.com/dwyl/html-form-send-email-via-google-script-without-server 
+		-->
+
+		<!-- https://script.google.com/macros/s/AKfycbwB27sOONeeZFDoYXvG6BXJlG_s2eNRsy8vxarZCbi5iV6sUt4/exec -->
+
+			<div class="row">
+				<form class="col s12 text-blue">
+					<div class="row">
+						<div class="input-field col m6 s12">
+							<input id="first_name" type="text" class="validate">
+							<label for="first_name">First Name</label>
+						</div>
+						<div class="input-field col m6 s12">
+							<input id="last_name" type="text" class="validate">
+							<label for="last_name">Last Name</label>
+						</div>
+						<div class="input-field col s12">
+							<input id="email" type="email" class="validate">
+							<label for="email">Email</label>
+						</div>
+						<div class="input-field col s12">
+					      <textarea id="textarea1" class="materialize-textarea"></textarea>
+					      <label for="textarea1">Message</label>
+					    </div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+		</div>
+	</div>
+
+</div>
+
 <!-- 
 ########################################################################## 
 -->
 
-	<div id="Cancellation-policy-section" class="divider"></div>
-	<div class="section">
-		<h4>Cancellation policy</h4>
-		<blockquote style="border-left: 5px solid #eeff41;">
-			<p>Out of courtesy, all appointment have a minimum 24-hours cancellation policy.</p>
-			<p>Customers who are late for their appointment may lose their reservation.  Please be on time.</p>
-		</blockquote>
-	</div>
+<div id="Cancellation-policy-section" class="divider"></div>
+<div class="section">
+	<h4>Cancellation policy</h4>
+	<blockquote style="border-left: 5px solid #eeff41;">
+		<p>Out of courtesy, all appointment have a minimum 24-hours cancellation policy.</p>
+		<p>Customers who are late for their appointment may lose their reservation.  Please be on time.</p>
+	</blockquote>
+</div>
 
 
 </div>	
 
 
-<!-- <footer class="page-footer"> -->
-	<!-- <div class="container">
+<!-- <footer class="pßage-footer">
+	<div class="container">
 		<div class="row">
 
 		</div>
@@ -375,8 +468,9 @@ function init() {
 		<div class="container ">2014 Copyright Text
 			<a class="grey-text text-lighten-4 right" href="#!">More Links</a>
 		</div>
-	</div> -->
-<!-- </footer> -->
+	</div>
+	</footer> -->
+
 </body>
 
 

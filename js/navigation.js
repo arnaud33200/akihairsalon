@@ -18,6 +18,10 @@ function scrollToLocation() {
 	scrollToSection("location-section");
 }
 
+function scrollToContact() {
+	scrollToSection("contact-section");
+}
+
 // -----------------------------
 
 function scrollToSection(sectionName) {
