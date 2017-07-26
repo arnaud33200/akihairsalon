@@ -29,6 +29,134 @@
 
 <body onload="">
 
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "HairSalon",
+
+			"url": "http://aki-imamura.com/",
+
+			"name": "Aki Imamura",
+			"description": "Aki is a creative stylist whose passion for hair began in 2004 in Japan, where she both trained and taught styling.",
+			"image": "https://image.ibb.co/i4OqFQ/profile3.jpg",
+
+			"email": "akiimamura1021@gmail.com",
+			"telephone": "+16473811245",
+			"openingHours": "We,Th, Fr, 12:00-20:00, Sa, 10:00-18:00",
+			"paymentAccepted": "Cash, credit card, online booking",
+			
+
+			"sameAs":[
+				"https://www.facebook.com/akiimamurahairstylist/",
+				"https://www.instagram.com/akihairstylist",
+				"http://bookeo.com/akiimamura"
+			],
+
+			"priceRange" : "$10 - $200",
+
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Toronto",
+				"addressRegion": "ON",
+				"postalCode": "M5B1N8",
+				"streetAddress": "261A Yonge St, Unit 2F"
+			},
+
+			"location": {
+				"@type": "PostalAddress",
+				"addressLocality": "Toronto",
+				"addressRegion": "ON",
+				"postalCode": "M5B1N8",
+				"streetAddress": "261A Yonge St, Unit 2F"
+			},
+
+			"employee": {
+				"@type": "Person",
+				"name": "Aki Imamura",
+				"email": "akiimamura1021@gmail.com",
+				"jobTitle": "Hairstylist",
+				"telephone": "+16473811245",
+				"image": "https://image.ibb.co/i4OqFQ/profile3.jpg"
+			},
+
+			"funder": {
+				"@type": "Person",
+				"name": "Aki Imamura",
+				"email": "akiimamura1021@gmail.com",
+				"jobTitle": "Hairstylist",
+				"telephone": "+16473811245",
+				"image": "images/profile3.jpg"
+			},
+
+			"contactPoint" : { 
+				"@type" : "ContactPoint",
+				"telephone" : "+16473811245",
+				"email": "akiimamura1021@gmail.com",
+				"contactType" : "customer service",
+				"areaServed" : "CA"
+    		},
+
+			"logo": "",
+
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": "43.655239",
+				"longitude": "-79.380248"
+			},
+
+			"hasOfferCatalog": {
+			    "@type": "OfferCatalog",
+			    "name": "Cut",
+			    "itemListElement": [	
+					{
+						"@type": "Offer", "price": "50",
+						"itemOffered": { "@type": "Service", "name": "Women's Hair Cut" }
+					},
+					{
+						"@type": "Offer", "price": "40",
+						"itemOffered": { "@type": "Service", "name": "Men's Hair Cut" }
+					},
+					{
+						"@type": "Offer", "price": "35",
+						"itemOffered": { "@type": "Service", "name": "Men's side shaving cut" }
+					},
+					{
+						"@type": "Offer", "price": "10 - 15",
+						"itemOffered": { "@type": "Service", "name": "Bangs' Hair Cut" }
+					},
+					{
+						"@type": "Offer", "price": "40",
+						"itemOffered": { "@type": "Service", "name": "Shampoo and blow dry" }
+					},
+					{
+						"@type": "Offer", "price": "65",
+						"itemOffered": { "@type": "Service", "name": "Up do" }
+					},
+					{
+						"@type": "Offer", "price": "65",
+						"itemOffered": { "@type": "Service", "name": "Roots touch up" }
+					},
+					{
+						"@type": "Offer", "price": "70~",
+						"itemOffered": { "@type": "Service", "name": "Single process" }
+					},
+					{
+						"@type": "Offer", "price": "150~",
+						"itemOffered": { "@type": "Service", "name": "Double process" }
+					},
+					{
+						"@type": "Offer", "price": "130~",
+						"itemOffered": { "@type": "Service", "name": "Full highlights" }
+					},
+					{
+						"@type": "Offer", "price": "180~",
+						"itemOffered": { "@type": "Service", "name": "Ombre/ Balayage" }
+					}
+				]
+			}
+		}
+	</script>
+
 	<style type="text/css">
 
 		@font-face {
@@ -132,19 +260,6 @@ function init() {
     	$('#modal1').modal();
     });
 
-</script>
-
-<script type="application/ld+json">
-{
-  "@type": "Hairstylist",
-  "url": "http://aki-imamura.com/",
-  "name": "Aki Imamura",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+1-647-381-1245",
-    "contactType": "Customer service"
-  }
-}
 </script>
 
 <!-- <a class="btn-floating btn-large waves-effect waves-light black" style="position: fixed; bottom: 20px; right: 20px;"><i class="material-icons">add</i></a> -->
