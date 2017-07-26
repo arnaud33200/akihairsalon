@@ -29,6 +29,134 @@
 
 <body onload="">
 
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "HairSalon",
+
+			"url": "http://aki-imamura.com/",
+
+			"name": "Aki Imamura",
+			"description": "Aki is a creative stylist whose passion for hair began in 2004 in Japan, where she both trained and taught styling.",
+			"image": "https://image.ibb.co/i4OqFQ/profile3.jpg",
+
+			"email": "akiimamura1021@gmail.com",
+			"telephone": "+16473811245",
+			"openingHours": "We,Th, Fr, 12:00-20:00, Sa, 10:00-18:00",
+			"paymentAccepted": "Cash, credit card, online booking",
+			
+
+			"sameAs":[
+				"https://www.facebook.com/akiimamurahairstylist/",
+				"https://www.instagram.com/akihairstylist",
+				"http://bookeo.com/akiimamura"
+			],
+
+			"priceRange" : "$10 - $200",
+
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Toronto",
+				"addressRegion": "ON",
+				"postalCode": "M5B1N8",
+				"streetAddress": "261A Yonge St, Unit 2F"
+			},
+
+			"location": {
+				"@type": "PostalAddress",
+				"addressLocality": "Toronto",
+				"addressRegion": "ON",
+				"postalCode": "M5B1N8",
+				"streetAddress": "261A Yonge St, Unit 2F"
+			},
+
+			"employee": {
+				"@type": "Person",
+				"name": "Aki Imamura",
+				"email": "akiimamura1021@gmail.com",
+				"jobTitle": "Hairstylist",
+				"telephone": "+16473811245",
+				"image": "https://image.ibb.co/i4OqFQ/profile3.jpg"
+			},
+
+			"funder": {
+				"@type": "Person",
+				"name": "Aki Imamura",
+				"email": "akiimamura1021@gmail.com",
+				"jobTitle": "Hairstylist",
+				"telephone": "+16473811245",
+				"image": "images/profile3.jpg"
+			},
+
+			"contactPoint" : { 
+				"@type" : "ContactPoint",
+				"telephone" : "+16473811245",
+				"email": "akiimamura1021@gmail.com",
+				"contactType" : "customer service",
+				"areaServed" : "CA"
+    		},
+
+			"logo": "",
+
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": "43.655239",
+				"longitude": "-79.380248"
+			},
+
+			"hasOfferCatalog": {
+			    "@type": "OfferCatalog",
+			    "name": "Cut",
+			    "itemListElement": [	
+					{
+						"@type": "Offer", "price": "50",
+						"itemOffered": { "@type": "Service", "name": "Women's Hair Cut" }
+					},
+					{
+						"@type": "Offer", "price": "40",
+						"itemOffered": { "@type": "Service", "name": "Men's Hair Cut" }
+					},
+					{
+						"@type": "Offer", "price": "35",
+						"itemOffered": { "@type": "Service", "name": "Men's side shaving cut" }
+					},
+					{
+						"@type": "Offer", "price": "10 - 15",
+						"itemOffered": { "@type": "Service", "name": "Bangs' Hair Cut" }
+					},
+					{
+						"@type": "Offer", "price": "40",
+						"itemOffered": { "@type": "Service", "name": "Shampoo and blow dry" }
+					},
+					{
+						"@type": "Offer", "price": "65",
+						"itemOffered": { "@type": "Service", "name": "Up do" }
+					},
+					{
+						"@type": "Offer", "price": "65",
+						"itemOffered": { "@type": "Service", "name": "Roots touch up" }
+					},
+					{
+						"@type": "Offer", "price": "70~",
+						"itemOffered": { "@type": "Service", "name": "Single process" }
+					},
+					{
+						"@type": "Offer", "price": "150~",
+						"itemOffered": { "@type": "Service", "name": "Double process" }
+					},
+					{
+						"@type": "Offer", "price": "130~",
+						"itemOffered": { "@type": "Service", "name": "Full highlights" }
+					},
+					{
+						"@type": "Offer", "price": "180~",
+						"itemOffered": { "@type": "Service", "name": "Ombre/ Balayage" }
+					}
+				]
+			}
+		}
+	</script>
+
 	<style type="text/css">
 
 		@font-face {
@@ -134,19 +262,6 @@ function init() {
 
 </script>
 
-<script type="application/ld+json">
-{
-  "@type": "Hairstylist",
-  "url": "http://aki-imamura.com/",
-  "name": "Aki Imamura",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+1-647-381-1245",
-    "contactType": "Customer service"
-  }
-}
-</script>
-
 <!-- <a class="btn-floating btn-large waves-effect waves-light black" style="position: fixed; bottom: 20px; right: 20px;"><i class="material-icons">add</i></a> -->
 
 <nav id="top-navigation-bar" style="position: fixed; z-index: 1000; display: none;">
@@ -157,7 +272,7 @@ function init() {
 		<div id="desktop-menu-buttons">
 			<ul id="nav-mobile" class="left">
 				<li><a class="white-text" onclick="scrollToAbout()">About</a></li>
-				<li><a class="white-text" onclick="scrollToPrice()">Price</a></li>
+				<li><a class="white-text" onclick="scrollToPrice()">Prices</a></li>
 				<li><a class="white-text" onclick="scrollToHours()">Hours</a></li>
 				<li><a class="white-text" onclick="scrollToLocation()">Location</a></li>
 				<li><a class="white-text" onclick="scrollToContact()">Contact</a></li>
@@ -186,7 +301,7 @@ function init() {
 		<a class="waves-effect white-text" onclick="scrollToAbout()">About</a>
 	</li>
 	
-	<li><a class="waves-effect white-text" onclick="scrollToPrice()">Price</a></li>
+	<li><a class="waves-effect white-text" onclick="scrollToPrice()">Prices</a></li>
 	<li><a class="waves-effect white-text" onclick="scrollToHours()">Hours</a></li>
 	<li><a class="waves-effect white-text" onclick="scrollToLocation()">Location</a></li>
 	<li><a class="waves-effect white-text" onclick="scrollToContact()">Contact</a></li>
@@ -222,7 +337,7 @@ function init() {
 		</div>
 		
 		<div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
-			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToPrice()" style="width: 100%;">Price</a>
+			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToPrice()" style="width: 100%;">Prices</a>
 			<!-- <a class="waves-effect waves-light btn  grey darken-1" onclick="scrollToPrice()" style="width: 100%;">Price</a> -->
 		</div>
 		<div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
@@ -251,9 +366,9 @@ function init() {
 
 		<div class="col m8 s12">
 
-			<p>Aki is a creative stylist who passion for hair began in 2004 in Japan, where she has both trained and taught styling.</p>
+			<p>Aki is a creative stylist whose passion for hair began in 2004 in Japan, where she both trained and taught styling.</p>
 
-			<p>She came to Toronto to expand her repertoire of styles and to bring her own creative style to Canada.  After a few years of working in a salon in Toronto, she ventured out on her own and started her own business.  She prides herself on providing a specialized cut for each of her clients and cares immensely about details and texture, and it shows! Her focus is on having all her customers to look their best.  She thanks all her past clients for their business and is always open to receiving new ones.</p>
+			<p>She came to Toronto to expand her repertoire of styles and to bring her own creative style to Canada. After a few years of working in a salon in Toronto, she decided to venture out and start her own business. She prides herself on providing a specialized cut for each client and cares immensely about the details and textures of her cuts, and it shows! Her focus is on having all her customers look their best. She thanks all her past clients for their business and is always open to receiving new ones.</p>
 
 		</div>
 
@@ -280,7 +395,7 @@ function init() {
 
 <div id="price-section" class="divider"></div>
 <div class="section">
-	<h4>Price</h4>
+	<h4>Prices</h4>
 
 	<div class="row">
 		<div class="col m6 s12">
@@ -334,10 +449,10 @@ function init() {
 <div class="section">
 	<h4>Hours</h4>
 	<ul>
-		<li style="list-style-type: circle;">Wednesday to Friday (12pm to 8pm) </li>
+		<li style="list-style-type: circle;">Wednesday to Friday (12pm to 8pm)</li>
 		<li style="list-style-type: circle;">Saturday (10am to 6pm)</li>
 	</ul>
-	<p style=" margin-left: 30px; color: #b1b1b1; font-style: italic;">Hours may vary. Please inquire with the stylist.</p>
+	<p style=" margin-left: 30px; color: #b1b1b1; font-style: italic;">Hours may vary. Please inquire about availability with the stylist.</p>
 </div>
 
 <!-- 
@@ -448,8 +563,8 @@ function init() {
 <div class="section">
 	<h4>Cancellation policy</h4>
 	<blockquote style="border-left: 5px solid #eeff41;">
-		<p>Out of courtesy, all appointment have a minimum 24-hours cancellation policy.</p>
-		<p>Customers who are late for their appointment may lose their reservation.  Please be on time.</p>
+		<p>Out of courtesy, all appointments have a minimum 24-hour cancellation policy.</p>
+		<p>Customers who are late for their appointment may lose their reservation. Please be on time.</p>
 	</blockquote>
 </div>
 
