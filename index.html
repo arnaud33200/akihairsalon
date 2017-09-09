@@ -306,9 +306,9 @@ function init() {
 	<li><a class="waves-effect white-text" onclick="scrollToLocation()">Location</a></li>
 	<li><a class="waves-effect white-text" onclick="scrollToContact()">Contact</a></li>
 	<li><div class="divider"></div></li>
+	<li><a class="waves-effect white-text" onclick="openBookeo()">Online Booking</a></li>
 	<li><a class="waves-effect white-text" onclick="openFacebook()">Facebook</a></li>
 	<li><a class="waves-effect white-text" onclick="openInstagram()">Instagram</a></li>
-	<li><a class="waves-effect white-text" onclick="openBookeo()">Online Booking</a></li>
 </ul>
 
 <a href="#" data-activates="slide-out" class="black-text button-collapse"></a>
@@ -322,11 +322,19 @@ function init() {
 
 	<div style="text-align: center;">
 		<div class="social-icn-group">
+			<a class="icn-social bookeo" target="_blank" onclick="openBookeo()"></a>
 			<a class="icn-social facebook" target="_blank" onclick="openFacebook()"></a>
 			<a class="icn-social instagram" target="_blank" onclick="openInstagram()"></a>
-			<a class="icn-social bookeo" target="_blank" onclick="openBookeo()"></a>
 		</div>
 	</div>
+
+	<div style="text-align: center;">
+		<div class="social-icn-group">
+		<a class="waves-effect waves-light btn grey-text text-darken-3 white" style="border: 1px solid #424242;" onclick="openBookeo()">BOOK ONLINE</a>
+		</div>
+	</div>
+
+	
 
 	<!-- BUTTON FOR SECTION NAVIGATION -->
 
@@ -369,6 +377,12 @@ function init() {
 			<p>Aki is a creative stylist whose passion for hair began in 2004 in Japan, where she both trained and taught styling.</p>
 
 			<p>She came to Toronto to expand her repertoire of styles and to bring her own creative style to Canada. After a few years of working in a salon in Toronto, she decided to venture out and start her own business. She prides herself on providing a specialized cut for each client and cares immensely about the details and textures of her cuts, and it shows! Her focus is on having all her customers look their best. She thanks all her past clients for their business and is always open to receiving new ones.</p>
+
+			<ul>
+				<li style="list-style-type: circle;">Bookeo: <a href="https://www-1555b.bookeo.com/bookeo/b_akiimamura_start.html?ctlsrc=1504993502528&src=02h">Online Booking</a></li>
+				<li style="list-style-type: circle;">Facebook: <a href="https://www.facebook.com/akiimamurahairstylist">@akiimamurahairstylist</a></li>
+				<li style="list-style-type: circle;">Instagram: <a href="https://www.instagram.com/akihairstylist/">@akihairstylist</a></li>
+			</ul>
 
 		</div>
 
@@ -504,8 +518,12 @@ function init() {
 
 	 <ul>
 
-      <li><div class="valign-center"><i class="smaller material-icons">perm_phone_msg</i><span>(647) 381 - 1245 (text)</span></div></li>
-	<li><div class="valign-center"><i class="smaller material-icons">email</i><span>akiimamura1021@gmail.com<span></div></li>
+      <li><div class="valign-center"><i class="smaller material-icons">perm_phone_msg</i><span>
+      <a href="tel:647-381-1245">(647) 381-1245 (text)</a>
+      </span></div></li>
+	<li><div class="valign-center"><i class="smaller material-icons">email</i><span>
+	<a href="mailto:akiimamura1021@gmail.com">akiimamura1021@gmail.com</a>
+	<span></div></li>
     </ul>
 
 
@@ -568,12 +586,16 @@ function init() {
 	</blockquote>
 </div>
 
+<!-- <div id="footer" style="height: 50px; background-color: black;">
+</div> -->
 
 </div>	
 
 
-<!-- <footer class="pßage-footer">
-	<div class="container">
+
+
+<!-- <footer>
+	<div class="container 	">
 		<div class="row">
 
 		</div>
@@ -584,7 +606,7 @@ function init() {
 			<a class="grey-text text-lighten-4 right" href="#!">More Links</a>
 		</div>
 	</div>
-	</footer> -->
+</footer> -->
 
 </body>
 
