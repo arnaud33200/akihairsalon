@@ -226,10 +226,31 @@ function init() {
 		// initPriceTable(mydata);
 
 		$(document).on('scroll', function() {
+
 			if ($(this).scrollTop() >= $('#about-section').position().top - 150) {
 				$("#top-navigation-bar").slideDown();
-			} else {
+				$('#scroll-up-button').fadeIn();
+			} 
+			else {
 				$("#top-navigation-bar").slideUp();
+				$('#scroll-up-button').fadeOut();
+			}
+
+			// var msg = "scrollTop = " + $(this).scrollTop() + " / footer = " + $('#footer-section').position().top + "doc = " + $(window).width();
+			// console.log(msg)
+
+			var gap = 560;
+			if ($(document).width() >= 1250) { gap = 641 }
+
+			if ($(this).scrollTop() >= $('#footer-section').position().top - gap) {
+				// var scrollDiff =  $(this).scrollTop() - $('#footer-section').position().top;
+				var scrollDiff =  $(this).scrollTop() - $('#footer-section').position().top + gap;
+
+				var newMarginBottom = (10 + scrollDiff) + 'px';
+				$('#scroll-up-button').css({'bottom':newMarginBottom});
+			}
+			else {
+				$('#scroll-up-button').css({'bottom':'10px'});	
 			}
 		})
 
@@ -283,12 +304,12 @@ function init() {
 
 	$(document).ready(function() {
     	// the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-    	$('#modal1').modal();
+    	// $('#modal1').modal();
     });
 
 </script>
 
-<!-- <a class="btn-floating btn-large waves-effect waves-light black" style="position: fixed; bottom: 20px; right: 20px;"><i class="material-icons">add</i></a> -->
+<a id="scroll-up-button" class="btn-floating btn-large waves-effect waves-light blue-grey darken-3" onclick="scrollToTopPage()" style="position: fixed; bottom: 10px; right: 10px; display: none; z-index: 1000;"><i class="material-icons">arrow_upward</i></a>
 
 <nav id="top-navigation-bar" style="position: fixed; z-index: 1000; display: none;">
 	<div class="nav-wrapper blue-grey darken-3">
