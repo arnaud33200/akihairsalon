@@ -1,10 +1,15 @@
-.social-icn-group {
-	margin-top: -30px;
-	margin-bottom: 30px;
-	display: inline-block;
-}
 
 /* Social Media Icon */
+
+.social-icn-group {
+    margin-top: -30px;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.social-icn-group-footer {
+    display: inline-block;
+}
 
 .icn-social {
 	width: 30px;
@@ -14,6 +19,23 @@
 	background-size: contain;
     opacity: 0.5;
 }
+
+.icn-social.facebook { background-image: url(../images/icn-facebook.png); }
+.icn-social.instagram { background-image: url(../images/icn-instagram.png); }
+.icn-social.bookeo { background-image: url(../images/icn-bookeo.png); }
+
+.icn-social-footer {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin: 5px 10px 0px 0px;
+    background-size: contain;
+    opacity: 1.0;
+}
+
+.icn-social-footer.facebook { background-image: url(../images/icn-facebook.png); }
+.icn-social-footer.instagram { background-image: url(../images/icn-instagram.png); }
+.icn-social-footer.bookeo { background-image: url(../images/icn-bookeo.png); }
 
 table.price-table {
 	/*background: gray;*/
@@ -62,6 +84,28 @@ table.price-table {
     color: -internal-quirk-inherit;
 }
 
+footer-text {
+    font-size: 11px;
+}
+
+footer-dev {
+    display: block;
+    text-align: right;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+footer-left {
+    display: block;
+    text-align: left;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
 td, th {
 	padding: 5px 5px;
 }
@@ -99,10 +143,6 @@ i.smaller {
 }
 
 /*----------------*/
-
-.icn-social.facebook { background-image: url(../images/icn-facebook.png); }
-.icn-social.instagram { background-image: url(../images/icn-instagram.png); }
-.icn-social.bookeo { background-image: url(../images/icn-bookeo.png); }
 
   /* label color */
 .input-field label {
