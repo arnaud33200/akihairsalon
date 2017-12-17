@@ -1,0 +1,171 @@
+{
+	"@context": "http://schema.org",
+	"@type": "HairSalon",
+
+	"url": "http://aki-imamura.com/",
+
+	"name": "Aki Imamura",
+	"description": "Aki is a creative stylist whose passion for hair began in 2004 in Japan, where she both trained and taught styling.",
+	"image": "https://image.ibb.co/i4OqFQ/profile3.jpg",
+
+	"email": "akiimamura1021@gmail.com",
+	"telephone": "+16473811245",
+	"openingHours": "We,Th, Fr, 12:00-20:00, Sa, 10:00-18:00",
+	"paymentAccepted": "Cash, credit card, online booking",
+	
+
+	"sameAs":[
+		"https://www.facebook.com/akiimamurahairstylist/",
+		"https://www.instagram.com/akihairstylist",
+		"http://bookeo.com/akiimamura"
+	],
+
+	"priceRange" : "$10 - $200",
+
+	"address": {
+		"@type": "PostalAddress",
+		"addressLocality": "Toronto",
+		"addressRegion": "ON",
+		"postalCode": "M5B1N8",
+		"streetAddress": "261A Yonge St, Unit 2F"
+	},
+
+	"location": {
+		"@type": "PostalAddress",
+		"addressLocality": "Toronto",
+		"addressRegion": "ON",
+		"postalCode": "M5B1N8",
+		"streetAddress": "261A Yonge St, Unit 2F"
+	},
+
+	"employee": {
+		"@type": "Person",
+		"name": "Aki Imamura",
+		"email": "akiimamura1021@gmail.com",
+		"jobTitle": "Hairstylist",
+		"telephone": "+16473811245",
+		"image": "https://image.ibb.co/i4OqFQ/profile3.jpg"
+	},
+
+	"funder": {
+		"@type": "Person",
+		"name": "Aki Imamura",
+		"email": "akiimamura1021@gmail.com",
+		"jobTitle": "Hairstylist",
+		"telephone": "+16473811245",
+		"image": "images/profile3.jpg"
+	},
+
+	"contactPoint" : { 
+		"@type" : "ContactPoint",
+		"telephone" : "+16473811245",
+		"email": "akiimamura1021@gmail.com",
+		"contactType" : "customer service",
+		"areaServed" : "CA"
+	},
+
+	"logo": "",
+
+	"geo": {
+		"@type": "GeoCoordinates",
+		"latitude": "43.655239",
+		"longitude": "-79.380248"
+	},
+
+	"hasOfferCatalog": {
+	    "@type": "OfferCatalog",
+	    "name": "Cut",
+	    "itemListElement": [	
+			{
+				"@type": "Offer", "price": "50",
+				"itemOffered": { "@type": "Service", 
+					"category": "Cut",
+					"name": "Women's Hair Cut",
+					"alternateName": "Women's Hair Cut",
+					"description": "" 
+				}
+			},
+			{
+				"@type": "Offer", "price": "40",
+				"itemOffered": { "@type": "Service", 
+					"category": "Cut",
+					"name": "Men's Hair Cut",
+					"alternateName": "Men's Hair Cut",
+					"description": "" 
+				}
+			},
+			{
+				"@type": "Offer", "price": "10 - 15",
+				"itemOffered": { "@type": "Service", 
+					"category": "Cut",
+					"name": "Bangs' Hair Cut",
+					"alternateName": "Bangs' Hair Cut",
+					"description": "" 
+				}
+			},
+			{
+				"@type": "Offer", "price": "40",
+				"itemOffered": { "@type": "Service", 
+					"category": "Styling",
+					"name": "Shampoo and blow dry",
+					"alternateName": "Shampoo and blow dry",
+					"description": "" 
+				}
+			},
+			{
+				"@type": "Offer", "price": "65",
+				"itemOffered": { "@type": "Service", 
+					"category": "Styling",
+					"name": "Up do",
+					"alternateName": "Up do",
+					"description": "" 
+				}
+			},
+			{
+				"@type": "Offer", "price": "65",
+				"itemOffered": { "@type": "Service", 
+					"category": "Colouring",
+					"name": "Roots touch up",
+					"alternateName": "Roots tColor ouch up",
+					"description": "(within 4 weeks)" 
+				}
+			},
+			{
+				"@type": "Offer", "price": "70~",
+				"itemOffered": { "@type": "Service", 
+					"category": "Colouring",
+					"name": "Single process",
+					"alternateName": "Color Single process",
+					"description": "" 
+				}
+			},
+			{
+				"@type": "Offer", "price": "150~",
+				"itemOffered": { "@type": "Service", 
+					"category": "Colouring",
+					"name": "Double process",
+					"alternateName": "Color Double process",
+					"description": "" 
+				}
+			},
+			{
+				"@type": "Offer", "price": "130~",
+				"itemOffered": { "@type": "Service", 
+					"category": "Colouring",
+					"name": "Full highlights",
+					"alternateName": "Color Full highlights",
+					"description": "" 
+				}
+			},
+			{
+				"@type": "Offer", "price": "180~",
+				"itemOffered": { "@type": "Service", 
+					"category": "Colouring",
+					"name": "Ombre/ Balayage",
+					"alternateName": "Color Ombre/ Balayage",
+					"description": "*(Multi process) Inquire within" 
+				}
+			}
+		]
+	}
+}

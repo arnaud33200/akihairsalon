@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <html prefix="og: http://ogp.me/ns#">
 <head>
 	<meta http-equiv="Expires" content="30" />
@@ -55,72 +59,6 @@
 
 </head>
 
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
 <body onload="">
 
 	<!-- GOOGLE TAG MANAGER -->
@@ -128,131 +66,10 @@
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	<script type="application/ld+json">
-		{
-			"@context": "http://schema.org",
-			"@type": "HairSalon",
-
-			"url": "http://aki-imamura.com/",
-
-			"name": "Aki Imamura",
-			"description": "Aki is a creative stylist whose passion for hair began in 2004 in Japan, where she both trained and taught styling.",
-			"image": "https://image.ibb.co/i4OqFQ/profile3.jpg",
-
-			"email": "akiimamura1021@gmail.com",
-			"telephone": "+16473811245",
-			"openingHours": "We,Th, Fr, 12:00-20:00, Sa, 10:00-18:00",
-			"paymentAccepted": "Cash, credit card, online booking",
-			
-
-			"sameAs":[
-				"https://www.facebook.com/akiimamurahairstylist/",
-				"https://www.instagram.com/akihairstylist",
-				"http://bookeo.com/akiimamura"
-			],
-
-			"priceRange" : "$10 - $200",
-
-			"address": {
-				"@type": "PostalAddress",
-				"addressLocality": "Toronto",
-				"addressRegion": "ON",
-				"postalCode": "M5B1N8",
-				"streetAddress": "261A Yonge St, Unit 2F"
-			},
-
-			"location": {
-				"@type": "PostalAddress",
-				"addressLocality": "Toronto",
-				"addressRegion": "ON",
-				"postalCode": "M5B1N8",
-				"streetAddress": "261A Yonge St, Unit 2F"
-			},
-
-			"employee": {
-				"@type": "Person",
-				"name": "Aki Imamura",
-				"email": "akiimamura1021@gmail.com",
-				"jobTitle": "Hairstylist",
-				"telephone": "+16473811245",
-				"image": "https://image.ibb.co/i4OqFQ/profile3.jpg"
-			},
-
-			"funder": {
-				"@type": "Person",
-				"name": "Aki Imamura",
-				"email": "akiimamura1021@gmail.com",
-				"jobTitle": "Hairstylist",
-				"telephone": "+16473811245",
-				"image": "images/profile3.jpg"
-			},
-
-			"contactPoint" : { 
-				"@type" : "ContactPoint",
-				"telephone" : "+16473811245",
-				"email": "akiimamura1021@gmail.com",
-				"contactType" : "customer service",
-				"areaServed" : "CA"
-    		},
-
-			"logo": "",
-
-			"geo": {
-				"@type": "GeoCoordinates",
-				"latitude": "43.655239",
-				"longitude": "-79.380248"
-			},
-
-			"hasOfferCatalog": {
-			    "@type": "OfferCatalog",
-			    "name": "Cut",
-			    "itemListElement": [	
-					{
-						"@type": "Offer", "price": "50",
-						"itemOffered": { "@type": "Service", "name": "Women's Hair Cut" }
-					},
-					{
-						"@type": "Offer", "price": "40",
-						"itemOffered": { "@type": "Service", "name": "Men's Hair Cut" }
-					},
-					{
-						"@type": "Offer", "price": "35",
-						"itemOffered": { "@type": "Service", "name": "Men's side shaving cut" }
-					},
-					{
-						"@type": "Offer", "price": "10 - 15",
-						"itemOffered": { "@type": "Service", "name": "Bangs' Hair Cut" }
-					},
-					{
-						"@type": "Offer", "price": "40",
-						"itemOffered": { "@type": "Service", "name": "Shampoo and blow dry" }
-					},
-					{
-						"@type": "Offer", "price": "65",
-						"itemOffered": { "@type": "Service", "name": "Up do" }
-					},
-					{
-						"@type": "Offer", "price": "65",
-						"itemOffered": { "@type": "Service", "name": "Color Roots touch up" }
-					},
-					{
-						"@type": "Offer", "price": "70~",
-						"itemOffered": { "@type": "Service", "name": "Color Single process" }
-					},
-					{
-						"@type": "Offer", "price": "150~",
-						"itemOffered": { "@type": "Service", "name": "Color Double process" }
-					},
-					{
-						"@type": "Offer", "price": "130~",
-						"itemOffered": { "@type": "Service", "name": "Color Full highlights" }
-					},
-					{
-						"@type": "Offer", "price": "180~",
-						"itemOffered": { "@type": "Service", "name": "Color Ombre/ Balayage" }
-					}
-				]
-			}
-		}
+		<?php
+	        $websiteInfoString = file_get_contents("website-info.json");
+	        echo $websiteInfoString;
+		?>
 	</script>
 
 	<style type="text/css">
@@ -346,7 +163,6 @@ function init() {
 		window.onresize = function(event) {
 			windowResizeEvent();
 		};
-
 		windowResizeEvent();
 
 	 // Initialize collapse button
@@ -390,11 +206,6 @@ function init() {
 			openUrl(this.url);
     	});
 	}
-
-	$(document).ready(function() {
-    	// the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-    	// $('#modal1').modal();
-    });
 
 </script>
 
@@ -547,35 +358,38 @@ function init() {
 <div class="section">
 	<h4>Prices</h4>
 
+	<?php
 
+		// ini_set( 'error_reporting', E_ALL );
+		// ini_set( 'display_errors', true );
 
-</div>
+		include 'HairPriceItem.php';
 
-<!-- 
-##### PRICE
-##################################################################### 
--->
+		$categoryArray = HairPriceItem::makeHairPriceItemArray($websiteInfoString);
 
-<div id="price-section" class="divider"></div>
-<div class="section">
-	<h4>Prices</h4>
+	?>
 
 	<div class="row">
 		<div class="col m6 s12">
 
 			<h5>CUT</h5>
-			<table class="price-table">			
-				<tr><th class="price-title">Women's Hair Cut</th><th class="price-value">50</th></tr>
-				<tr><th class="price-title">Men's Hair Cut</th><th class="price-value">40</th></tr>
-				<!-- <tr><th class="price-title">Men's side shaving cut</th><th class="price-value">35</th></tr>
-				<tr><th class="price-detail">(within 3 weeks)</th></tr> -->
-				<tr><th class="price-title">Bangs' Hair Cut</th><th class="price-value">10 - 15</th></tr>
+			<table class="price-table">		
+				<?php
+					$itemArray = $categoryArray["Cut"];
+					foreach ($itemArray as $priceItem) {
+						echo($priceItem->getStringTableRow());
+					}	
+				?>
 			</table>
 
 			<h5>STYLING</h5>
 			<table class="price-table">
-				<tr><th class="price-title">Shampoo and blow dry</th><th class="price-value">40</th></tr>
-				<tr><th class="price-title">Up do</th><th class="price-value">65</th></tr>
+				<?php
+					$itemArray = $categoryArray["Styling"];
+					foreach ($itemArray as $priceItem) {
+						echo($priceItem->getStringTableRow());
+					}	
+				?>
 			</table>
 
 		</div>
@@ -584,13 +398,12 @@ function init() {
 
 			<h5>COLOURING </h5>
 			<table class="price-table">
-				<tr><th class="price-title">Roots touch up</th><th class="price-value">65</th></tr>
-				<tr><th class="price-detail">(within 4 weeks)</th></tr>
-				<tr><th class="price-title">Single process</th><th class="price-value">70~</th></tr>
-				<tr><th class="price-title">Double process</th><th class="price-value">150~</th></tr>
-				<tr><th class="price-title">Full highlights</th><th class="price-value">130~</th></tr>
-				<tr><th class="price-title">Ombre/ Balayage</th><th class="price-value">180~</th></tr>
-				<tr><th class="price-detail">*(Multi process) Inquire within</th></tr>
+				<?php
+					$itemArray = $categoryArray["Colouring"];
+					foreach ($itemArray as $priceItem) {
+						echo($priceItem->getStringTableRow());
+					}	
+				?>
 			</table>
 		</div>
 	</div>
@@ -601,6 +414,9 @@ function init() {
 		</a>
 
 	</div>
+
+		
+
 </div>
 
 <!-- 
