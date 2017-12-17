@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <html prefix="og: http://ogp.me/ns#">
 <head>
 	<meta http-equiv="Expires" content="30" />
@@ -363,7 +359,7 @@ function init() {
 		// ini_set( 'error_reporting', E_ALL );
 		// ini_set( 'display_errors', true );
 
-		include 'HairPriceItem.php';
+		include 'php/HairPriceItem.php';
 
 		$categoryArray = HairPriceItem::makeHairPriceItemArray($websiteInfoString);
 
