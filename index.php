@@ -36,14 +36,16 @@
 	<meta property="og:site_name" content="Aki Hairstylist"/>
 	<meta property="og:title" content="Hair Dresser in Toronto: Cut, Styling & Color."/>
 
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js" async></script>
+	<script type="text/javascript" src="js/materialize.js" async></script>
+
+	<script type="text/javascript" src="js/main.js" async></script>
+	<script type="text/javascript" src="js/navigation.js" async></script>
+	<script type="text/javascript" src="js/map.js" async></script>
 
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-	<!-- <script type="text/javascript" src="data/price.json"></script> -->
-	<script type="text/javascript" src="js/navigation.js" async></script>
-	<script type="text/javascript" src="js/map.js" async></script>
 
 	<link type="text/css" rel="stylesheet" href="css/style.css"/>
 
@@ -81,129 +83,6 @@
 		}
 
 	</style>
-
-	<script type="text/javascript" src="js/jquery-2.1.1.min.js" async></script>
-	<script type="text/javascript" src="js/materialize.js" async></script>
-
-	<script>
-
-		function windowResizeEvent() {
-
-	// display or hide the mobile side bar
-	if ($(window).width() < 600) {
-		$("#desktop-menu-buttons").hide();
-		$("#mobile-menu-buttons").show();
-	} else {
-		$("#desktop-menu-buttons").show();
-		$("#mobile-menu-buttons").hide();
-	}
-
-	// adjust the font of main title
-	if ($(window).width() < 470) {
-		$("#main-title").css('font-size', '70px');
-	} else {
-		$("#main-title").css('font-size', '100px');
-	}
-}
-
-function openPhotoSwipe() {
-    var pswpElement = document.querySelectorAll('.pswp')[0];
-
-    // build items array
-    var items = [
-        { src: 'https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg', w: 964, h: 1024 },
-        { src: 'https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg', w: 1024, h: 683 }
-    ];
-    
-    var options = {
-        history: false, focus: false,
-        showAnimationDuration: 0,
-        hideAnimationDuration: 0
-    };
-    
-    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-    gallery.init();
-};
-
-function init() {
-
-		$(document).on('scroll', function() {
-
-			if ($(this).scrollTop() >= $('#about-section').position().top - 150) {
-				$("#top-navigation-bar").slideDown();
-				$('#scroll-up-button').fadeIn();
-			} 
-			else {
-				$("#top-navigation-bar").slideUp();
-				$('#scroll-up-button').fadeOut();
-			}
-
-			// var msg = "scrollTop = " + $(this).scrollTop() + " / footer = " + $('#footer-section').position().top + "doc = " + $(window).width();
-			// console.log(msg)
-
-			var gap = 560;
-			if ($(document).width() >= 1250) { gap = 641 }
-
-			if ($(this).scrollTop() >= $('#footer-section').position().top - gap) {
-				// var scrollDiff =  $(this).scrollTop() - $('#footer-section').position().top;
-				var scrollDiff =  $(this).scrollTop() - $('#footer-section').position().top + gap;
-
-				var newMarginBottom = (10 + scrollDiff) + 'px';
-				$('#scroll-up-button').css({'bottom':newMarginBottom});
-			}
-			else {
-				$('#scroll-up-button').css({'bottom':'10px'});	
-			}
-		})
-
-		window.onresize = function(event) {
-			windowResizeEvent();
-		};
-		windowResizeEvent();
-
-	 // Initialize collapse button
-	 $('.button-collapse').sideNav({
-	      menuWidth: 150, // Default is 300
-	      edge: 'left', // Choose the horizontal origin
-	      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-	      draggable: false // Choose whether you can drag to open on touch screens
-	  });
-
-	 $("#menu-button").click(function() {
-	 	$('.button-collapse').sideNav('show');
-	 });
-
-	}
-
-	window.onload = init;
-
-	function initMap() {
-		var latlng = new google.maps.LatLng(39.305, -76.617);
-
-		var position = new google.maps.LatLng(43.655239, -79.380248);
-		var positionMap = new google.maps.LatLng(43.655805, -79.380559);
-
-		var map = new google.maps.Map(document.getElementById('map'), {
-			zoom: 17,
-			center: positionMap
-		});
-
-		// map.setOptions({styles: styles['default']});
-		map.setOptions({styles: styles});
-
-		var marker = new google.maps.Marker({
-			position: position,
-			map: map,
-			title: 'Aki Imamura',
-			url: "https://www.google.ca/maps/place/Aki+Imamura+Hairstylist/@43.6552185,-79.3844401,16z/data=!4m8!1m2!2m1!1saki+!3m4!1s0x89d4cb34cc094ca7:0xc8794f493deb5022!8m2!3d43.6552089!4d-79.3800547"
-		});
-
-		google.maps.event.addListener(marker, 'click', function() {
-			openUrl(this.url);
-    	});
-	}
-
-</script>
 
 <a id="scroll-up-button" class="btn-floating btn-large waves-effect waves-light blue-grey darken-3" onclick="scrollToTopPage()" style="position: fixed; bottom: 10px; right: 10px; display: none; z-index: 1000;"><i class="material-icons">arrow_upward</i></a>
 
