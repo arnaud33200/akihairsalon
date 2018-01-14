@@ -91,3 +91,19 @@ function openPhotoSwipe() {
     var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
     gallery.init();
 };
+
+function sendMessage() {
+	var formObject = $("#message-form");
+	var values = formObject.serialize();
+	$.ajax({
+	    url: "php/MailContact.php", type: "post", data: values ,
+	    success: function (response) {
+	      var taux = 10000;
+	      debugger;
+	    },
+	    error: function(jqXHR, textStatus, errorThrown) {
+	       console.log(textStatus, errorThrown);
+	       debugger;
+	    }
+	});
+};

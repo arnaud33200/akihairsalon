@@ -366,48 +366,36 @@
 	<span></div></li>
     </ul>
 
-
-	
-
-	<!-- <a class="waves-effect waves-light btn" href="#modal1">Send Message</a> -->
+  
+    <a id="send-message-button" class="waves-effect waves-light btn modal-trigger grey-text text-darken-3 lime accent-2" href="#modal1">Send Message</a>
 
 	<!-- Modal Structure -->
 	<div id="modal1" class="modal modal-fixed-footer">
 		<div class="modal-content">
 		<h5>Send Message</h5>
 
-		<!-- 
-		a way to send message without server
-		https://github.com/dwyl/html-form-send-email-via-google-script-without-server 
-		-->
-
-		<!-- https://script.google.com/macros/s/AKfycbwB27sOONeeZFDoYXvG6BXJlG_s2eNRsy8vxarZCbi5iV6sUt4/exec -->
-
 			<div class="row">
-				<form class="col s12 text-blue">
+				<form class="col s12 text-blue" name="message-form" id="message-form">
 					<div class="row">
 						<div class="input-field col m6 s12">
-							<input id="first_name" type="text" class="validate">
-							<label for="first_name">First Name</label>
+							<input name="name" id="name" type="text" class="validate">
+							<label for="name">Name</label>
 						</div>
 						<div class="input-field col m6 s12">
-							<input id="last_name" type="text" class="validate">
-							<label for="last_name">Last Name</label>
+							<input name="email" id="email" type="email" class="validate">
+							<label for="email">Email*</label>
 						</div>
 						<div class="input-field col s12">
-							<input id="email" type="email" class="validate">
-							<label for="email">Email</label>
-						</div>
-						<div class="input-field col s12">
-					      <textarea id="textarea1" class="materialize-textarea"></textarea>
-					      <label for="textarea1">Message</label>
+					      <textarea name="message" id="message" class="materialize-textarea"></textarea>
+					      <label for="message">Message*</label>
 					    </div>
 					</div>
 				</form>
 			</div>
+
 		</div>
 		<div class="modal-footer">
-			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+			<a class="modal-action modal-close waves-effect waves-green btn-flat" onclick="sendMessage()">Send</a>
 		</div>
 	</div>
 
