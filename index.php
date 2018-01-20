@@ -378,16 +378,16 @@
 				<form class="col s12 text-blue" name="message-form" id="message-form">
 					<div class="row">
 						<div class="input-field col m6 s12">
-							<input name="name" id="name" type="text" class="validate">
+							<input name="name" id="name" type="text" placeholder="Tell us your name">
 							<label for="name">Name</label>
 						</div>
-						<div class="input-field col m6 s12">
-							<input name="email" id="email" type="email" class="validate">
-							<label for="email">Email*</label>
+						<div class="input-field col m6 s12" style="margin-bottom: 30px;">
+							<input name="email" id="email" type="email" placeholder="name@email.com" class="validate" >
+							<label for="email" data-error="incorrect email format">Email*</label>
 						</div>
 						<div class="input-field col s12">
-					      <textarea name="message" id="message" class="materialize-textarea"></textarea>
-					      <label for="message">Message*</label>
+					      <textarea name="message" id="message" placeholder="Hello Aki, ..." class="materialize-textarea validate"></textarea>
+					      <label for="message" data-error="Message need a content">Message*</label>
 					    </div>
 					</div>
 				</form>
@@ -395,7 +395,8 @@
 
 		</div>
 		<div class="modal-footer">
-			<a class="modal-action modal-close waves-effect waves-green btn-flat" onclick="sendMessage()">Send</a>
+			<a class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+			<a class="modal-action waves-effect waves-green btn-flat" onclick="sendMessage()">Send</a>
 		</div>
 	</div>
 

@@ -93,17 +93,69 @@ function openPhotoSwipe() {
 };
 
 function sendMessage() {
+
+	if (checkMessageIsNotValide()) {
+		return;
+	}
+
+	$('#modal1').modal('close');
+	Materialize.toast('Your message has been sent.', 4000);
+
+	var message = $('#message').val();	
+	if (message == "") {
+		// no need to send anything if no message
+		resetModalInputFields();
+		return;
+	}
+
 	var formObject = $("#message-form");
 	var values = formObject.serialize();
 	$.ajax({
 	    url: "php/MailContact.php", type: "post", data: values ,
 	    success: function (response) {
 	      var taux = 10000;
-	      debugger;
+	      
 	    },
 	    error: function(jqXHR, textStatus, errorThrown) {
 	       console.log(textStatus, errorThrown);
 	       debugger;
 	    }
 	});
+
+	resetModalInputFields();
 };
+
+function resetModalInputFields() {
+	// reset the field after
+	$('#name').val("");
+	$('#email').val("");
+	$('#email').attr("class", "validate");
+	$('#message').val("");
+	$('#message').attr("class", "materialize-textarea validate");
+}
+
+function checkMessageIsNotValide() {
+// validate email
+	var email = $('#email').val();
+	if (isEmail(email) == false) {
+		$('#email').attr("class", "validate invalid");
+		return true;
+	}
+
+	// disable for the moment, there is a display bug
+	// var message = $('#message').val();
+	// if (message == "") {
+	// 	$('#message').attr("class", "materialize-textarea validate invalid");
+	// 	return true;
+	// }
+
+	return false;
+}
+
+function isEmail(email) {
+	if (email == "") {
+		return false;
+	}
+  	var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  	return regex.test(email);
+}
