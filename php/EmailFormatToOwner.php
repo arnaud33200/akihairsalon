@@ -20,7 +20,7 @@ footer-left {
 	</style>
 
 	<div class="container">
-		<h3>New Message <i class="material-icons">email</i></h3>
+		<h5>New Message <i class="material-icons">email</i></h5>
 
 		<blockquote style="border-left: 5px solid #eeff41;">
       		<p style="margin-bottom: -10px;"><b>FROM</b>: [NAME]</p>

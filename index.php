@@ -70,6 +70,68 @@
 		?>
 	</script>
 
+	<script>
+
+	function initMap() {
+		var colorMap1 = '#9e9e9e';
+var colorMapBackground = '#f0f4c3';
+var colorMapBuilding1 = '#dce775';
+var colorMapBuilding2 = '#e6ee9c';
+
+var styles = [
+
+// hide store arounds 
+  // { featureType: 'poi.business', stylers: [{visibility: 'off'}] },
+  // { elementType: 'labels.icon', stylers: [{visibility: 'off'}] },
+
+// change map colors
+  { elementType: 'geometry', stylers: [{color: colorMapBackground}] },
+
+  { elementType: 'labels.text.fill', stylers: [{color: '#616161'}] },
+  { elementType: 'labels.text.stroke', stylers: [{color: colorMapBackground}] },
+
+  { featureType: 'administrative.land_parcel', elementType: 'labels.text.fill', stylers: [{color: '#bdbdbd'}] },
+
+  { featureType: 'poi', elementType: 'geometry', stylers: [{color: colorMapBuilding1}] },
+  { featureType: 'poi', elementType: 'labels.text.fill', stylers: [{color: '#757575'}] },
+  { featureType: 'poi.park', elementType: 'geometry', stylers: [{color: colorMapBuilding2}] },
+  { featureType: 'poi.park', elementType: 'labels.text.fill', stylers: [{color: colorMap1}] },
+
+  { featureType: 'road', elementType: 'geometry', stylers: [{color: '#ffffff'}] },
+  { featureType: 'road.arterial', elementType: 'labels.text.fill', stylers: [{color: '#757575'}] },
+  { featureType: 'road.highway', elementType: 'geometry', stylers: [{color: '#dadada'}] },
+  { featureType: 'road.highway', elementType: 'labels.text.fill', stylers: [{color: '#616161'}] },
+  { featureType: 'road.local', elementType: 'labels.text.fill', stylers: [{color: colorMap1}] },
+
+  { featureType: 'transit.line', elementType: 'geometry', stylers: [{color: colorMapBuilding2}] },
+  { featureType: 'transit.station', elementType: 'geometry', stylers: [{color: colorMapBuilding1}] },
+
+  { featureType: 'water', elementType: 'geometry', stylers: [{color: '#c9c9c9'}] },
+  { featureType: 'water', elementType: 'labels.text.fill', stylers: [{color: colorMap1}]}
+];
+
+
+		var latlng = new google.maps.LatLng(39.305, -76.617);
+		var position = new google.maps.LatLng(43.655239, -79.380248);
+		var positionMap = new google.maps.LatLng(43.655805, -79.380559);
+		var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 17,
+			center: positionMap
+		});
+		// map.setOptions({styles: styles['default']});
+		map.setOptions({styles: styles});
+		var marker = new google.maps.Marker({
+			position: position,
+			map: map,
+			title: 'Aki Imamura',
+			url: "https://www.google.ca/maps/place/Aki+Imamura+Hairstylist/@43.6552185,-79.3844401,16z/data=!4m8!1m2!2m1!1saki+!3m4!1s0x89d4cb34cc094ca7:0xc8794f493deb5022!8m2!3d43.6552089!4d-79.3800547"
+		});
+		google.maps.event.addListener(marker, 'click', function() {
+			openUrl(this.url);
+    	});
+	}
+</script>
+
 	<style type="text/css">
 
 		@font-face {
@@ -201,9 +263,9 @@
 			<p>She came to Toronto to expand her repertoire of styles and to bring her own creative style to Canada. After a few years of working in a salon in Toronto, she decided to venture out and start her own business. She prides herself on providing a specialized cut for each client and cares immensely about the details and textures of her cuts, and it shows! Her focus is on having all her customers look their best. She thanks all her past clients for their business and is always open to receiving new ones.</p>
 
 			<ul>
-				<li style="list-style-type: circle;">Bookeo: <a href="https://www-1555b.bookeo.com/bookeo/b_akiimamura_start.html?ctlsrc=1504993502528&src=02h">Online Booking</a></li>
-				<li style="list-style-type: circle;">Facebook: <a href="https://www.facebook.com/akiimamurahairstylist">@akiimamurahairstylist</a></li>
-				<li style="list-style-type: circle;">Instagram: <a href="https://www.instagram.com/akihairstylist/">@akihairstylist</a></li>
+				<li style="list-style-type: circle;">Bookeo: <a href-"" target="_blank" onclick="openBookeo()">Online Booking</a></li>
+				<li style="list-style-type: circle;">Facebook: <a href-"" target="_blank" onclick="openFacebook()">@akiimamurahairstylist</a></li>
+				<li style="list-style-type: circle;">Instagram: <a href-"" target="_blank" onclick="openInstagram()">@akihairstylist</a></li>
 			</ul>
 
 		</div>
@@ -303,7 +365,7 @@
 <div class="section">
 	<h4>Hours</h4>
 	<ul>
-		<li style="list-style-type: circle;">Wednesday to Friday (12pm to 8pm)</li>
+		<li style="list-style-type: circle;">Wednesday to Friday (11am to 7pm)</li>
 		<li style="list-style-type: circle;">Saturday (10am to 6pm)</li>
 	</ul>
 	<p style=" margin-left: 30px; color: #b1b1b1; font-style: italic;">Hours may vary. Please inquire about availability with the stylist.</p>

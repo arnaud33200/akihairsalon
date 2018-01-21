@@ -24,7 +24,7 @@ footer-left {
 		<blockquote style="border-left: 5px solid #eeff41;">
       		<p>Your message has been sent, Aki will get back at you as soon as possible.</p>	
 			<p>If you desire to make an appointment, please <a href="https://bookeo.com/akiimamura">Book Online</a></p>
-			<p>Visit the website if you wanna know about the prices, the opening hours or the location.</p>
+			<p>Visit the website if you want to know about the prices, the opening hours or the location.</p>
 			<a class="waves-effect waves-light btn grey-text text-darken-3 lime accent-2" href="http://aki-imamura.com/" target="_blank">Website</a>    
     	</blockquote>
 
