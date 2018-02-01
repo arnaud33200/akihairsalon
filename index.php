@@ -276,9 +276,31 @@ var styles = [
 			</div>
 		</div>
 
-				<!-- <div class="z-depth-2" style="width:200px; height:200px; display: inline-block;"> 			
-				<img src="images/longProfile1.jpg" style="width:100%; height:100%;">
-			</div> -->
+		<div class="col s12" style="text-align: center; margin-top: 50px; margin-bottom: -30px;" >
+			<h5>Gallery</h5>
+		</div>
+
+		<div class="col s12">
+			<div class="carousel" style="height: 300px;">
+
+				<?php
+					$photoArray = array (
+						"1" => "images/gallery/26297098_324317281387175_7097286744852135936_n.jpg",
+						"2" => "images/gallery/26157046_1675418849189668_8944606634752081920_n.jpg",
+						"3" => "images/gallery/18580464_1723841270960213_8489376582828294144_n.jpg",
+						"4" => "images/gallery/18300001_1078146285649575_6285473132031508480_n.jpg",
+						"5" => "images/gallery/19379859_241553553006623_1588723817428025344_n.jpg",
+						"6" => "images/gallery/18380302_638712029655871_6092909639114948608_n.jpg",
+						"7" => "images/gallery/18380476_767379316773967_983511725116489728_n.jpg",
+						"8" => "images/gallery/19122438_344115686004195_1556200400917364736_n.jpg"
+					);
+					foreach ($photoArray as $link => $imgLink) {
+						echo("<a class=\"carousel-item\" href=\"#!\"><img src=\"" . $imgLink . "\"></a>");
+					}	
+				?>	
+  			</div>
+
+		</div>
 
 		</div>
 

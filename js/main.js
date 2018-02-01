@@ -21,8 +21,15 @@ function init() {
 	 	$('.button-collapse').sideNav('show');
 	 });
 
-	 $(document).ready(function(){
+	 $(document).ready(function() {
 		$('.modal').modal();
+		// onCycleTo: function (ele, dragged) {
+		// 		console.log(ele);
+		// 		console.log($(ele).index()); // the slide's index
+		// 		console.log(dragged);
+		// 	}
+		var option = {shift: 40, dist: -40};
+		$('.carousel').carousel(option);
 	});
 }
 
