@@ -9427,6 +9427,10 @@ if (Vel) {
             return e.targetTouches[0].clientX;
           }
 
+          if (e.originalEvent.targetTouches && e.originalEvent.targetTouches.length >= 1) {
+            return e.originalEvent.targetTouches[0].clientX;
+          }
+
           // mouse event
           return e.clientX;
         }
@@ -9435,6 +9439,10 @@ if (Vel) {
           // touch event
           if (e.targetTouches && e.targetTouches.length >= 1) {
             return e.targetTouches[0].clientY;
+          }
+
+          if (e.originalEvent.targetTouches && e.originalEvent.targetTouches.length >= 1) {
+            return e.originalEvent.targetTouches[0].clientY;
           }
 
           // mouse event
