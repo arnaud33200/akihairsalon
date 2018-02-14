@@ -36,25 +36,20 @@
 	<meta property="og:site_name" content="Aki Hairstylist"/>
 	<meta property="og:title" content="Hair Dresser in Toronto: Cut, Styling & Color."/>
 
-	<script type="text/javascript" src="js/jquery-2.1.1.min.js" async></script>
+	<!-- <script type="text/javascript" src="js/jquery-2.1.1.min.js" async></script> -->
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js" async></script>
 	<script type="text/javascript" src="js/materialize.js" async></script>
 
 	<script type="text/javascript" src="js/main.js" async></script>
 	<script type="text/javascript" src="js/navigation.js" async></script>
 	<script type="text/javascript" src="js/map.js" async></script>
 
-	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 	<link type="text/css" rel="stylesheet" href="css/style.css"/>
-
-	<!-- PHOTOSWIPE -->
-	<!-- <link rel="stylesheet" href="photoswipe/photoswipe.css"> 
-	<link rel="stylesheet" href="photoswipe/default-skin/default-skin.css"> 
-	<script src="photoswipe/photoswipe.min.js"></script> 
-	<script src="photoswipe/photoswipe-ui-default.min.js"></script>  -->
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
 <body onload="">
@@ -281,21 +276,22 @@ var styles = [
 		</div>
 
 		<div class="col s12">
+	
 			<div class="carousel" style="height: 300px;">
 
 				<?php
 					$photoArray = array (
-						"1" => "images/gallery/26297098_324317281387175_7097286744852135936_n.jpg",
-						"2" => "images/gallery/26157046_1675418849189668_8944606634752081920_n.jpg",
-						"3" => "images/gallery/18580464_1723841270960213_8489376582828294144_n.jpg",
-						"4" => "images/gallery/18300001_1078146285649575_6285473132031508480_n.jpg",
-						"5" => "images/gallery/19379859_241553553006623_1588723817428025344_n.jpg",
-						"6" => "images/gallery/18380302_638712029655871_6092909639114948608_n.jpg",
-						"7" => "images/gallery/18380476_767379316773967_983511725116489728_n.jpg",
-						"8" => "images/gallery/19122438_344115686004195_1556200400917364736_n.jpg"
+						"1" => "images/gallery/1.jpg",
+						"2" => "images/gallery/2.jpg",
+						"3" => "images/gallery/3.jpg",
+						"4" => "images/gallery/4.jpg",
+						"5" => "images/gallery/5.jpg",
+						"6" => "images/gallery/6.jpg",
+						"7" => "images/gallery/7.jpg",
+						"8" => "images/gallery/8.jpg"
 					);
 					foreach ($photoArray as $link => $imgLink) {
-						echo("<a class=\"carousel-item\" href=\"#!\"><img src=\"" . $imgLink . "\"></a>");
+						echo("<a class=\"carousel-item\"><img class=\"materialboxed\" width=\"200px\" src=\"" . $imgLink . "\"></a>");
 					}	
 				?>	
   			</div>
