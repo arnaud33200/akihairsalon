@@ -35,6 +35,15 @@ function init() {
 	});
 }
 
+function closeTopWarningMessage() {
+	$("#top_warning_message").fadeOut();
+}
+
+function topWarningMessageClickAction() {
+	scrollToHours();
+	$("#top_warning_message").fadeOut();
+}
+
 function windowResizeEvent() {
 
 // display or hide the mobile side bar

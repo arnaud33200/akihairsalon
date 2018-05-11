@@ -143,34 +143,52 @@ var styles = [
 
 <a id="scroll-up-button" class="btn-floating btn-large waves-effect waves-light blue-grey darken-3" onclick="scrollToTopPage()" style="position: fixed; bottom: 10px; right: 10px; display: none; z-index: 1000;"><i class="material-icons">arrow_upward</i></a>
 
-<nav id="top-navigation-bar" style="position: fixed; z-index: 1000; display: none;">
-	<div class="nav-wrapper blue-grey darken-3">
-		<!-- <div class="nav-wrapper yellow lighten-3 "> -->
-		<a onclick="scrollToTopPage()" class="brand-logo right white-text" style="font-family: 'myFont';font-size: 40px; right: 1.5rem;">Aki Imamura</a>
+<div style="width: 100%; position: fixed; z-index: 1000;">
+	
+	<nav id="top-navigation-bar" style="display: none;">
+		<div class="nav-wrapper blue-grey darken-3">
+			<!-- <div class="nav-wrapper yellow lighten-3 "> -->
+			<a onclick="scrollToTopPage()" class="brand-logo right white-text" style="font-family: 'myFont';font-size: 40px; right: 1.5rem;">Aki Imamura</a>
 
-		<div id="desktop-menu-buttons">
-			<ul id="nav-mobile" class="left">
-				<li><a class="white-text" onclick="scrollToAbout()">About</a></li>
-				<li><a class="white-text" onclick="scrollToPrice()">Prices</a></li>
-				<li><a class="white-text" onclick="scrollToHours()">Hours</a></li>
-				<li><a class="white-text" onclick="scrollToLocation()">Location</a></li>
-				<li><a class="white-text" onclick="scrollToContact()">Contact</a></li>
-			</ul>
-		</div>
-		
-		<div id="mobile-menu-buttons">
-			<ul id="nav-mobile" class="left">
-				<li>
-					<a id="menu-button" data-activates="slide-out" class="white-text"><i class="material-icons">menu</i></a>
-				</li>
-			</ul>
-		</div>
+			<div id="desktop-menu-buttons">
+				<ul id="nav-mobile" class="left">
+					<li><a class="white-text" onclick="scrollToAbout()">About</a></li>
+					<li><a class="white-text" onclick="scrollToPrice()">Prices</a></li>
+					<li><a class="white-text" onclick="scrollToHours()">Hours</a></li>
+					<li><a class="white-text" onclick="scrollToLocation()">Location</a></li>
+					<li><a class="white-text" onclick="scrollToContact()">Contact</a></li>
+				</ul>
+			</div>
+			
+			<div id="mobile-menu-buttons">
+				<ul id="nav-mobile" class="left">
+					<li>
+						<a id="menu-button" data-activates="slide-out" class="white-text"><i class="material-icons">menu</i></a>
+					</li>
+				</ul>
+			</div>
 
-	</div>
-	<div class="nav-content">
-		
-	</div>
-</nav>
+		</div>
+		<div class="nav-content">
+			
+		</div>
+	</nav>
+
+
+
+	<div id="top_warning_message" class="card" style="background-color: #ff871ced">
+        <div class="card-content white-text" style="padding: 14px;margin-top: -7px;/* height: 52px; */">
+         	<i class="material-icons" style="position: absolute;">warning</i>
+         	<p onclick="topWarningMessageClickAction();" style="cursor: pointer; top: 17px;left: 50px;right: 20px;margin-left: 40px;margin-right: 30px;">
+         		I’m on a maternity leave to next spring
+			</p>
+			<!--<p>"I look forward to seeing you even more upon my return. Thank you!"</p>
+			<p>Aki</p> -->
+			<a onclick="closeTopWarningMessage();" style="cursor: pointer; position: absolute;right: 10px;top: 12px;color: white;"><i class="material-icons">clear</i></a>
+        </div>
+  	</div>	
+
+</div>
 
 <!-- Side Out Menu -->
 
@@ -185,7 +203,7 @@ var styles = [
 	<li><a class="waves-effect white-text" onclick="scrollToLocation()">Location</a></li>
 	<li><a class="waves-effect white-text" onclick="scrollToContact()">Contact</a></li>
 	<li><div class="divider"></div></li>
-	<li><a class="waves-effect white-text" onclick="openBookeo()">Online Booking</a></li>
+	<li><a class="waves-effect white-text" onclick="openBookeo()">Booking</a></li>
 	<li><a class="waves-effect white-text" onclick="openFacebook()">Facebook</a></li>
 	<li><a class="waves-effect white-text" onclick="openInstagram()">Instagram</a></li>
 </ul>
@@ -382,7 +400,18 @@ var styles = [
 <div id="hours-section" class="divider"></div>
 <div class="section">
 	<h4>Hours</h4>
-	<ul>
+
+	<div class="orange-text darken-4" style="background-color: #ffffff">
+        <!-- <div class="card-content orange-text" style="padding: 14px;margin-top: -7px;/* height: 52px; */"> -->
+         	<i class="material-icons" style="position: absolute;">warning</i>
+         	<p style="/* position: absolute; */top: 17px;left: 50px;right: 5px; margin-left: 40px;margin-right: 30px;">
+         		Due to maternity leave, the hairsalon will be closed,</br>
+         		from May 19th 2018 to Spring 2019
+			</p>
+        <!-- </div> -->
+  	</div>	
+
+	<ul style="opacity: 0.3;">
 		<li style="list-style-type: circle;">Wednesday to Friday (11am to 7pm)</li>
 		<li style="list-style-type: circle;">Saturday (10am to 6pm)</li>
 	</ul>
