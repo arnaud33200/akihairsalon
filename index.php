@@ -180,7 +180,7 @@ var styles = [
         <div class="card-content white-text" style="padding: 14px;margin-top: -7px;/* height: 52px; */">
          	<i class="material-icons" style="position: absolute;">warning</i>
          	<p onclick="topWarningMessageClickAction();" style="cursor: pointer; top: 17px;left: 50px;right: 20px;margin-left: 40px;margin-right: 30px;">
-         		I’m on a maternity leave to next spring
+         		Due to maternity leave, the hair salon will be closed May 2018 to spring 2019
 			</p>
 			<!--<p>"I look forward to seeing you even more upon my return. Thank you!"</p>
 			<p>Aki</p> -->
@@ -405,8 +405,8 @@ var styles = [
         <!-- <div class="card-content orange-text" style="padding: 14px;margin-top: -7px;/* height: 52px; */"> -->
          	<i class="material-icons" style="position: absolute;">warning</i>
          	<p style="/* position: absolute; */top: 17px;left: 50px;right: 5px; margin-left: 40px;margin-right: 30px;">
-         		Due to maternity leave, the hairsalon will be closed,</br>
-         		from May 19th 2018 to Spring 2019
+         		Due to maternity leave, the hair salon will be closed</br>
+         		May 2018 to spring 2019
 			</p>
         <!-- </div> -->
   	</div>	
