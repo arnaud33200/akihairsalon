@@ -193,17 +193,16 @@ var styles = [
 <!-- Side Out Menu -->
 
 <ul id="slide-out" class="side-nav blue-grey darken-2" style="">
-	<!-- <ul id="slide-out" class="side-nav yellow lighten-2" style=""> -->
 	<li style="margin-top: 60px;">
 		<a class="waves-effect white-text" onclick="scrollToAbout()">About</a>
 	</li>
 	
-	<li><a class="waves-effect white-text" onclick="scrollToPrice()">Prices</a></li>
+	<!-- <li><a class="waves-effect white-text" onclick="scrollToPrice()">Prices</a></li>
 	<li><a class="waves-effect white-text" onclick="scrollToHours()">Hours</a></li>
-	<li><a class="waves-effect white-text" onclick="scrollToLocation()">Location</a></li>
+	<li><a class="waves-effect white-text" onclick="scrollToLocation()">Location</a></li> -->
 	<li><a class="waves-effect white-text" onclick="scrollToContact()">Contact</a></li>
 	<li><div class="divider"></div></li>
-	<li><a class="waves-effect white-text" onclick="openBookeo()">Booking</a></li>
+	<!-- <li><a class="waves-effect white-text" onclick="openBookeo()">Booking</a></li> -->
 	<li><a class="waves-effect white-text" onclick="openFacebook()">Facebook</a></li>
 	<li><a class="waves-effect white-text" onclick="openInstagram()">Instagram</a></li>
 </ul>
@@ -212,24 +211,22 @@ var styles = [
 
 <div class="row" style="padding-top: 40px;"><div class="col s12 m8 offset-m2">
 
-	<!-- <div style> -->
-	<!-- </div> -->
-
 	<h1 id="main-title" style="font-family: 'myfont';text-align: center;font-size: 100px;">Aki Imamura</h1>
 
 	<div style="text-align: center;">
 		<div class="social-icn-group">
-			<a class="icn-social bookeo" target="_blank" onclick="openBookeo()"></a>
+			<!-- <a class="icn-social bookeo" target="_blank" onclick="openBookeo()"></a> -->
 			<a class="icn-social facebook" target="_blank" onclick="openFacebook()"></a>
 			<a class="icn-social instagram" target="_blank" onclick="openInstagram()"></a>
 		</div>
 	</div>
 
-	<div style="text-align: center;">
+<!-- BOOK ONLINE BUTTON -->
+	<!-- <div style="text-align: center;">
 		<div class="social-icn-group">
 		<a class="waves-effect waves-light btn grey-text text-darken-3 white" style="border: 1px solid #424242;" onclick="openBookeo()">BOOK ONLINE</a>
 		</div>
-	</div>
+	</div> -->
 
 	
 
@@ -238,24 +235,20 @@ var styles = [
 	<div class="row" style="max-width: 450px;">
 		<div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
 			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToAbout()" style="width: 100%;">About</a>
-			<!-- <a class="waves-effect waves-light btn  grey darken-1" onclick="scrollToAbout()" style="width: 100%;">About</a> -->
 		</div>
 		
-		<div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
+<!-- 		<div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
 			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToPrice()" style="width: 100%;">Prices</a>
-			<!-- <a class="waves-effect waves-light btn  grey darken-1" onclick="scrollToPrice()" style="width: 100%;">Price</a> -->
 		</div>
 		<div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
 			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToHours()" style="width: 100%;">Hours</a>
-			<!-- <a class="waves-effect waves-light btn  grey darken-1" onclick="scrollToHours()" style="width: 100%;">Hours</a> -->
 		</div>
 		<div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
 			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToLocation()" style="width: 100%;">Location</a>
-			<!-- <a class="waves-effect waves-light btn  grey darken-1" onclick="scrollToLocation()" style="width: 100%;">Location</a> -->
-		</div>
-		<!-- <div class="col s6 offset-s3" align="center" style="margin-bottom: 10px; text-align: center;">
-			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToContact()" style="width: 100%;">Contact</a>
 		</div> -->
+		<div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
+			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToContact()" style="width: 100%;">Contact</a>
+		</div>
 	</div>
 
 <!-- 
@@ -327,57 +320,51 @@ var styles = [
 ##################################################################### 
 -->
 
-<div id="price-section" class="divider"></div>
+<!-- <div id="price-section" class="divider"></div>
 <div class="section">
-	<h4>Prices</h4>
+	<h4>Prices</h4> -->
 
 	<?php
-
-		// ini_set( 'error_reporting', E_ALL );
-		// ini_set( 'display_errors', true );
-
-		include 'php/HairPriceItem.php';
-
-		$categoryArray = HairPriceItem::makeHairPriceItemArray($websiteInfoString);
-
+		// include 'php/HairPriceItem.php';
+		// $categoryArray = HairPriceItem::makeHairPriceItemArray($websiteInfoString);
 	?>
 
-	<div class="row">
+	<!-- <div class="row">
 		<div class="col m6 s12">
 
 			<h5>CUT</h5>
-			<table class="price-table">		
+			<table class="price-table">	 -->	
 				<?php
-					$itemArray = $categoryArray["Cut"];
-					foreach ($itemArray as $priceItem) {
-						echo($priceItem->getStringTableRow());
-					}	
+					// $itemArray = $categoryArray["Cut"];
+					// foreach ($itemArray as $priceItem) {
+					// 	echo($priceItem->getStringTableRow());
+					// }	
 				?>
-			</table>
+			<!-- </table>
 
 			<h5>STYLING</h5>
-			<table class="price-table">
+			<table class="price-table"> -->
 				<?php
-					$itemArray = $categoryArray["Styling"];
-					foreach ($itemArray as $priceItem) {
-						echo($priceItem->getStringTableRow());
-					}	
+					// $itemArray = $categoryArray["Styling"];
+					// foreach ($itemArray as $priceItem) {
+					// 	echo($priceItem->getStringTableRow());
+					// }	
 				?>
-			</table>
+			<!-- </table>
 
 		</div>
 
 		<div class="col m6 s12">
 
 			<h5>COLOURING </h5>
-			<table class="price-table">
+			<table class="price-table"> -->
 				<?php
-					$itemArray = $categoryArray["Colouring"];
-					foreach ($itemArray as $priceItem) {
-						echo($priceItem->getStringTableRow());
-					}	
+					// $itemArray = $categoryArray["Colouring"];
+					// foreach ($itemArray as $priceItem) {
+					// 	echo($priceItem->getStringTableRow());
+					// }	
 				?>
-			</table>
+<!-- 			</table>
 		</div>
 	</div>
 
@@ -387,28 +374,23 @@ var styles = [
 		</a>
 
 	</div>
-
-		
-
-</div>
+</div> -->
 
 <!-- 
 ##### HOURS 
 ##################################################################### 
 -->
 
-<div id="hours-section" class="divider"></div>
+<!-- <div id="hours-section" class="divider"></div>
 <div class="section">
 	<h4>Hours</h4>
 
 	<div class="orange-text darken-4" style="background-color: #ffffff">
-        <!-- <div class="card-content orange-text" style="padding: 14px;margin-top: -7px;/* height: 52px; */"> -->
          	<i class="material-icons" style="position: absolute;">warning</i>
-         	<p style="/* position: absolute; */top: 17px;left: 50px;right: 5px; margin-left: 40px;margin-right: 30px;">
+         	<p style="top: 17px;left: 50px;right: 5px; margin-left: 40px;margin-right: 30px;">
          		Due to maternity leave, the hair salon will be closed</br>
          		May 2018 to spring 2019
 			</p>
-        <!-- </div> -->
   	</div>	
 
 	<ul style="opacity: 0.3;">
@@ -416,14 +398,14 @@ var styles = [
 		<li style="list-style-type: circle;">Saturday (10am to 6pm)</li>
 	</ul>
 	<p style=" margin-left: 30px; color: #b1b1b1; font-style: italic;">Hours may vary. Please inquire about availability with the stylist.</p>
-</div>
+</div> -->
 
 <!-- 
 ##### LOCATION
 ##################################################################### 
 -->
 
-<div id="location-section" class="divider"></div>
+<!-- <div id="location-section" class="divider"></div>
 <div class="section">
 	<h4>Location</h4>
 
@@ -441,20 +423,18 @@ var styles = [
 			</div>
 
 			<div align="center">
-
 				<a class="waves-effect waves-light btn grey-text text-darken-3 lime accent-2" onclick="openBookeo()" style="display: inherit;     width: 250px;">
-					<!-- <a class="waves-effect waves-light btn grey darken-1 text-white" style="display: inherit;"> -->
 					Make Reservation</a>
 				</div>
 			</div>
 
-			<div id="map" class="col pull-l5 l7 s12" style="height:300px;"></div>
+			<div id="map" class="col pull-l5 l7 s12" style="height:300px;"></div> -->
 
 			<!-- INIT MAP SCRIPT AFTER MAP DIV TO AVOID BLANK LOADING ISSUE -->
-			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMAxQHRREX3zmqNnk5_UFxDomZbgIqpjA&callback=initMap" async defer></script>
+			<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMAxQHRREX3zmqNnk5_UFxDomZbgIqpjA&callback=initMap" async defer></script>
 		</div>
 
-	</div>
+	</div> -->
 
 	<!-- 
 ##### CONTACT
@@ -535,12 +515,12 @@ var styles = [
 		<div class="row" style="margin-bottom: 0px;">
 			
 			<div class="col s6">
-				<footer-left>Aki Imamura Hairstylist 2017</footer-left>
+				<footer-left>Aki Imamura Hairstylist 2018</footer-left>
 
 				<!-- SOCIAL ICONS -->
 				<div style="text-align: left;">
 					<div class="social-icn-group-footer">
-						<a class="icn-social-footer bookeo" target="_blank" onclick="openBookeo()"></a>
+						<!-- <a class="icn-social-footer bookeo" target="_blank" onclick="openBookeo()"></a> -->
 						<a class="icn-social-footer facebook" target="_blank" onclick="openFacebook()"></a>
 						<a class="icn-social-footer instagram" target="_blank" onclick="openInstagram()"></a>
 					</div>
@@ -548,8 +528,8 @@ var styles = [
 			</div>
 
 			<div class="col s6">
-				<footer-dev>Designed & Developed by</footer-dev>
-				<footer-dev>Arnaud Ladoucette</footer-dev>
+				<a href="https://github.com/arnaud33200/akihairsalon" target="_blank"><footer-dev>Developed by</footer-dev>
+				<footer-dev>Arnaud.L</footer-dev></a>
 			</div>
 		</div>
 	</div>
