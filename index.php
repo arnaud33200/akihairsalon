@@ -107,10 +107,13 @@ var styles = [
 
 
 		var latlng = new google.maps.LatLng(39.305, -76.617);
-		var position = new google.maps.LatLng(43.655239, -79.380248);
+		
+		// var position = new google.maps.LatLng(43.655239, -79.380248);
 		var positionMap = new google.maps.LatLng(43.655805, -79.380559);
+		var position = new google.maps.LatLng(43.654878, -79.379203);
+		var positionMap = new google.maps.LatLng(43.6557241,-79.3811009);
 		var map = new google.maps.Map(document.getElementById('map'), {
-			zoom: 17,
+			zoom: 16,
 			center: positionMap
 		});
 		// map.setOptions({styles: styles['default']});
@@ -118,8 +121,9 @@ var styles = [
 		var marker = new google.maps.Marker({
 			position: position,
 			map: map,
-			title: 'Aki Imamura',
-			url: "https://www.google.ca/maps/place/Aki+Imamura+Hairstylist/@43.6552185,-79.3844401,16z/data=!4m8!1m2!2m1!1saki+!3m4!1s0x89d4cb34cc094ca7:0xc8794f493deb5022!8m2!3d43.6552089!4d-79.3800547"
+			title: 'Kamiya Hairsalon',
+			url: "https://www.google.com/maps/place/Kamiya+Hairdressing/@43.6548872,-79.3804684,17z/data=!3m1!4b1!4m5!3m4!1s0x882ad58abe8bded7:0xdb9136e8ce897def!8m2!3d43.6548851!4d-79.3792542"
+			// url: "https://www.google.ca/maps/place/Aki+Imamura+Hairstylist/@43.6552185,-79.3844401,16z/data=!4m8!1m2!2m1!1saki+!3m4!1s0x89d4cb34cc094ca7:0xc8794f493deb5022!8m2!3d43.6552089!4d-79.3800547"
 		});
 		google.maps.event.addListener(marker, 'click', function() {
 			openUrl(this.url);
@@ -153,10 +157,10 @@ var styles = [
 			<div id="desktop-menu-buttons">
 				<ul id="nav-mobile" class="left">
 					<li><a class="white-text" onclick="scrollToAbout()">About</a></li>
-					<li><a class="white-text" onclick="scrollToPrice()">Prices</a></li>
-					<li><a class="white-text" onclick="scrollToHours()">Hours</a></li>
+					<!-- <li><a class="white-text" onclick="scrollToPrice()">Prices</a></li> -->
+					<!-- <li><a class="white-text" onclick="scrollToHours()">Hours</a></li> -->
 					<li><a class="white-text" onclick="scrollToLocation()">Location</a></li>
-					<li><a class="white-text" onclick="scrollToContact()">Contact</a></li>
+					<!-- <li><a class="white-text" onclick="scrollToContact()">Contact</a></li> -->
 				</ul>
 			</div>
 			
@@ -197,10 +201,10 @@ var styles = [
 		<a class="waves-effect white-text" onclick="scrollToAbout()">About</a>
 	</li>
 	
-	<!-- <li><a class="waves-effect white-text" onclick="scrollToPrice()">Prices</a></li>
-	<li><a class="waves-effect white-text" onclick="scrollToHours()">Hours</a></li>
-	<li><a class="waves-effect white-text" onclick="scrollToLocation()">Location</a></li> -->
-	<li><a class="waves-effect white-text" onclick="scrollToContact()">Contact</a></li>
+	<!-- <li><a class="waves-effect white-text" onclick="scrollToPrice()">Prices</a></li> -->
+	<!-- <li><a class="waves-effect white-text" onclick="scrollToHours()">Hours</a></li> -->
+	<li><a class="waves-effect white-text" onclick="scrollToLocation()">Location</a></li>
+	<!-- <li><a class="waves-effect white-text" onclick="scrollToContact()">Contact</a></li> -->
 	<li><div class="divider"></div></li>
 	<!-- <li><a class="waves-effect white-text" onclick="openBookeo()">Booking</a></li> -->
 	<li><a class="waves-effect white-text" onclick="openFacebook()">Facebook</a></li>
@@ -237,18 +241,18 @@ var styles = [
 			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToAbout()" style="width: 100%;">About</a>
 		</div>
 		
-<!-- 		<div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
+		<!-- <div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
 			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToPrice()" style="width: 100%;">Prices</a>
-		</div>
-		<div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
+		</div> -->
+		<!-- <div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
 			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToHours()" style="width: 100%;">Hours</a>
-		</div>
-		<div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
-			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToLocation()" style="width: 100%;">Location</a>
 		</div> -->
 		<div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
-			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToContact()" style="width: 100%;">Contact</a>
+			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToLocation()" style="width: 100%;">Location</a>
 		</div>
+		<!-- <div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
+			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToContact()" style="width: 100%;">Contact</a>
+		</div> -->
 	</div>
 
 <!-- 
@@ -266,10 +270,10 @@ var styles = [
 
 			<p>Aki is a creative stylist whose passion for hair began in 2004 in Japan, where she both trained and taught styling.</p>
 
-			<p>She came to Toronto to expand her repertoire of styles and to bring her own creative style to Canada. After a few years of working in a salon in Toronto, she decided to venture out and start her own business. She prides herself on providing a specialized cut for each client and cares immensely about the details and textures of her cuts, and it shows! Her focus is on having all her customers look their best. She thanks all her past clients for their business and is always open to receiving new ones.</p>
+			<p>She came to Toronto to expand her repertoire of styles and to bring her own creative style to Canada. She prides herself on providing a specialized cut for each client and cares immensely about the details and textures of her cuts, and it shows! Her focus is on having all her customers look their best. She thanks all her past clients for their business and is always open to receiving new ones.</p>
 
 			<ul>
-				<li style="list-style-type: circle;">Bookeo: <a href-"" target="_blank" onclick="openBookeo()">Online Booking</a></li>
+				<!-- <li style="list-style-type: circle;">Bookeo: <a href-"" target="_blank" onclick="openBookeo()">Online Booking</a></li> -->
 				<li style="list-style-type: circle;">Facebook: <a href-"" target="_blank" onclick="openFacebook()">@akiimamurahairstylist</a></li>
 				<li style="list-style-type: circle;">Instagram: <a href-"" target="_blank" onclick="openInstagram()">@akihairstylist</a></li>
 			</ul>
@@ -405,48 +409,50 @@ var styles = [
 ##################################################################### 
 -->
 
-<!-- <div id="location-section" class="divider"></div>
+<div id="location-section" class="divider"></div>
 <div class="section">
-	<h4>Location</h4>
+	<h4>Location & Info</h4>
 
 	<div class="row">
 
 		<div class="col push-l7 l5 s12" style="margin-bottom: 40px;">
 
 			<div style="">
-				<p>261A Yonge St., Unit 2F (Spellbound Hair)</p>
+				<p>Kamiya Hairdressing</p>
+				<!-- <p>220 Victoria St, M5B 2R6</p> -->
 				<ul>
-					<li style="list-style-type: circle;">Located right next to the Ed Mirvish Theatre.</li>
-					<li style="list-style-type: circle;">TTC accessible.  Only a short walk from Dundas Station.</li>
+					<!-- <li style="list-style-type: circle;">Located right next to the Ed Mirvish Theatre.</li> -->
+					<li style="list-style-type: circle;">220 Victoria St, M5B 2R6</li>
+					<li style="list-style-type: circle;">Short walk from Dundas Station.</li>
 					<li style="list-style-type: circle;">Easy access to public parking.</li>
 				</ul>
 			</div>
 
 			<div align="center">
-				<a class="waves-effect waves-light btn grey-text text-darken-3 lime accent-2" onclick="openBookeo()" style="display: inherit;     width: 250px;">
-					Make Reservation</a>
+				<a class="waves-effect waves-light btn grey-text text-darken-3 lime accent-2" 
+				onclick="openKamiya()" style="display: inherit; width: 250px;">
+					Website</a>
 				</div>
 			</div>
 
-			<div id="map" class="col pull-l5 l7 s12" style="height:300px;"></div> -->
+			<div id="map" class="col pull-l5 l7 s12" style="height:300px;"></div>
 
 			<!-- INIT MAP SCRIPT AFTER MAP DIV TO AVOID BLANK LOADING ISSUE -->
-			<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMAxQHRREX3zmqNnk5_UFxDomZbgIqpjA&callback=initMap" async defer></script>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMAxQHRREX3zmqNnk5_UFxDomZbgIqpjA&callback=initMap" async defer></script>
 		</div>
 
-	</div> -->
+	</div>
 
 	<!-- 
 ##### CONTACT
 ##################################################################### 		
 -->
 
-<div id="contact-section" class="divider"></div>
+<!-- <div id="contact-section" class="divider"></div>
 <div class="section">
 	<h4>Contact</h4>
 
 	 <ul>
-
       <li><div class="valign-center"><i class="smaller material-icons">perm_phone_msg</i><span>
       <a href="tel:647-381-1245">(647) 381-1245 (text)</a>
       </span></div></li>
@@ -458,7 +464,6 @@ var styles = [
   
     <a id="send-message-button" class="waves-effect waves-light btn modal-trigger grey-text text-darken-3 lime accent-2" href="#modal1">Send Message</a>
 
-	<!-- Modal Structure -->
 	<div id="modal1" class="modal modal-fixed-footer">
 		<div class="modal-content">
 		<h5>Send Message</h5>
@@ -489,20 +494,20 @@ var styles = [
 		</div>
 	</div>
 
-</div>
+</div> -->
 
 <!-- 
 ########################################################################## 
 -->
 
-<div id="Cancellation-policy-section" class="divider"></div>
+<!-- <div id="Cancellation-policy-section" class="divider"></div>
 <div class="section">
 	<h4>Cancellation policy</h4>
 	<blockquote style="border-left: 5px solid #eeff41;">
 		<p>Out of courtesy, all appointments have a minimum 24-hour cancellation policy.</p>
 		<p>Customers who are late for their appointment may lose their reservation. Please be on time.</p>
 	</blockquote>
-</div>
+</div> -->
 
 <!-- FOOTTER -->
 
