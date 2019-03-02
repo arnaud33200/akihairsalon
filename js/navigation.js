@@ -43,5 +43,5 @@ function openKamiya() { openUrl('http://kamiyahairdressing.ca'); }
 
 function openUrl(url) {
 	var win = window.open(url, '_blank');
-  	win.focus();
+	win.focus();
 }

@@ -5,13 +5,13 @@ var colorMapBuilding2 = '#e6ee9c';
 
 var styles = [
 
-// hide store arounds 
+// hide store arounds
   // { featureType: 'poi.business', stylers: [{visibility: 'off'}] },
   // { elementType: 'labels.icon', stylers: [{visibility: 'off'}] },
 
 // change map colors
   { elementType: 'geometry', stylers: [{color: colorMapBackground}] },
-
+  
   { elementType: 'labels.text.fill', stylers: [{color: '#616161'}] },
   { elementType: 'labels.text.stroke', stylers: [{color: colorMapBackground}] },
 
@@ -33,4 +33,4 @@ var styles = [
 
   { featureType: 'water', elementType: 'geometry', stylers: [{color: '#c9c9c9'}] },
   { featureType: 'water', elementType: 'labels.text.fill', stylers: [{color: colorMap1}]}
-];      
+];
