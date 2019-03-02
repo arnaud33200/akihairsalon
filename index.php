@@ -156,7 +156,7 @@ var styles = [
 
 			<div id="desktop-menu-buttons">
 				<ul id="nav-mobile" class="left">
-					<li><a class="white-text" onclick="scrollToAbout()">About</a></li>
+					<!-- <li><a class="white-text" onclick="scrollToAbout()">About</a></li> -->
 					<!-- <li><a class="white-text" onclick="scrollToPrice()">Prices</a></li> -->
 					<!-- <li><a class="white-text" onclick="scrollToHours()">Hours</a></li> -->
 					<!-- <li><a class="white-text" onclick="scrollToLocation()">Location</a></li> -->
