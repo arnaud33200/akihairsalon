@@ -1,13 +1,15 @@
 window.onload = init;
 
-function init() {		
+function init() {
+	maxScroll = 0;
+	footerHeight = 0;
 
 		$(document).on('scroll', windowScrollEvent);
 
 		window.onresize = function(event) {
 			windowResizeEvent();
 		};
-		windowResizeEvent();
+
 
 	 // Initialize collapse button
 	 $('.button-collapse').sideNav({
@@ -22,14 +24,17 @@ function init() {
 	 });
 
 	 $(document).ready(function() {
+		 windowResizeEvent();
+
+
 		$('.modal').modal();
-		
+
 		$('.materialboxed').materialbox();
-		
+
 		var option = {shift: 40, dist: -40, onCycleTo: function (ele, dragged) {
-				console.log(ele);
-				console.log($(ele).index()); // the slide's index
-				console.log(dragged);
+				// console.log(ele);
+				// console.log($(ele).index()); // the slide's index
+				// console.log(dragged);
 			}};
 		$('.carousel').carousel(option);
 	});
@@ -61,33 +66,35 @@ function windowResizeEvent() {
 	} else {
 		$("#main-title").css('font-size', '100px');
 	}
+
+	maxScroll = document.body.scrollHeight - window.innerHeight;
+	footerHeight = document.body.scrollHeight - $('#footer-section').position().top - 40
+	windowScrollEvent()
 }
 
 function windowScrollEvent() {
-	if ($(this).scrollTop() >= $('#about-section').position().top - 150) {
+	var currentScrollTop = document.body.scrollTop;
+
+	if (currentScrollTop >= $('#about-section').position().top - 150) {
 		$("#top-navigation-bar").slideDown();
 		$('#scroll-up-button').fadeIn();
-	} 
+	}
 	else {
 		$("#top-navigation-bar").slideUp();
 		$('#scroll-up-button').fadeOut();
 	}
 
-	// var msg = "scrollTop = " + $(this).scrollTop() + " / footer = " + $('#footer-section').position().top + "doc = " + $(window).width();
-	// console.log(msg)
-
-	var gap = 560;
-	if ($(document).width() >= 1250) { gap = 641 }
-
-	if ($(this).scrollTop() >= $('#footer-section').position().top - gap) {
-		// var scrollDiff =  $(this).scrollTop() - $('#footer-section').position().top;
-		var scrollDiff =  $(this).scrollTop() - $('#footer-section').position().top + gap;
-
-		var newMarginBottom = (10 + scrollDiff) + 'px';
+	var bottomMargin = 10;
+	var footerThresehold = maxScroll - footerHeight - bottomMargin;
+	if (currentScrollTop >= footerThresehold) {
+		var ratio = (currentScrollTop - footerThresehold) / footerHeight;
+		var scrollDiff =  ratio * footerHeight;
+		var newMarginBottom = (bottomMargin + scrollDiff) + 'px';
+		console.log("ratio = " + ratio + ", new margin = " + newMarginBottom);
 		$('#scroll-up-button').css({'bottom':newMarginBottom});
 	}
 	else {
-		$('#scroll-up-button').css({'bottom':'10px'});	
+		$('#scroll-up-button').css({'bottom': bottomMargin + 'px'});
 	}
 }
 
@@ -100,7 +107,7 @@ function sendMessage() {
 	$('#modal1').modal('close');
 	Materialize.toast('Your message has been sent.', 4000);
 
-	var message = $('#message').val();	
+	var message = $('#message').val();
 	if (message == "") {
 		// no need to send anything if no message
 		resetModalInputFields();
@@ -113,7 +120,7 @@ function sendMessage() {
 	    url: "php/MailContact.php", type: "post", data: values ,
 	    success: function (response) {
 	      var taux = 10000;
-	      
+
 	    },
 	    error: function(jqXHR, textStatus, errorThrown) {
 	       console.log(textStatus, errorThrown);
