@@ -295,17 +295,18 @@ var styles = [
 			<div class="col s12 m12">
 					<?php
 						$columnArray = array(
-							array("1" => "images/gallery/1.jpg", "2" => "images/gallery/2.jpg"),
-							array("3" => "images/gallery/3.jpg", "4" => "images/gallery/4.jpg"),
-							array("5" => "images/gallery/5.jpg", "6" => "images/gallery/6.jpg"),
-							array("7" => "images/gallery/7.jpg", "8" => "images/gallery/8.jpg")
+							array(10, 2, 7, 13),
+							array(11, 1, 8),
+							array(3, 4, 5),
+							array(6, 12, 9)
 						);
 						echo("<div class=\"photo-grid-row\">");
 						foreach ($columnArray as $photoArray) {
 							echo("<div class=\"photo-grid-column\">");
-							foreach ($photoArray as $link => $imgLink) {
+							// array("9" => "images/gallery/9.jpg", "10" => "images/gallery/2.jpg"),
+							foreach ($photoArray as $number) {
+								$imgLink = "images/gallery/" . $number . ".jpg";
 								echo("<img class=\"materialboxed\" src=\"" . $imgLink . "\" style=\"width:100%\">");
-								//echo("<img src=\"" . $imgLink . "\" style=\"width:100%\">");
 							}
 							echo("</div>");
 						}
