@@ -49,6 +49,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 	<link type="text/css" rel="stylesheet" href="css/style.css"/>
+	<link type="text/css" rel="stylesheet" href="css/photo_grid.css"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
@@ -272,38 +273,48 @@ var styles = [
 			</div>
 		</div>
 
-		<div class="col s12" style="text-align: center; margin-top: 50px; margin-bottom: -30px;" >
-			<h5>Gallery</h5>
-		</div>
 
-		<div class="col s12">
-
-			<div class="carousel" style="height: 300px;">
-
-				<?php
-					$photoArray = array (
-						"1" => "images/gallery/1.jpg",
-						"2" => "images/gallery/2.jpg",
-						"3" => "images/gallery/3.jpg",
-						"4" => "images/gallery/4.jpg",
-						"5" => "images/gallery/5.jpg",
-						"6" => "images/gallery/6.jpg",
-						"7" => "images/gallery/7.jpg",
-						"8" => "images/gallery/8.jpg"
-					);
-					foreach ($photoArray as $link => $imgLink) {
-						echo("<a class=\"carousel-item\"><img class=\"materialboxed\" width=\"200px\" src=\"" . $imgLink . "\"></a>");
-					}
-				?>
-  			</div>
-
-		</div>
 
 		</div>
 
 	</div>
 
 	<!-- </div> -->
+
+	<!--
+	##### ABOUT
+	#####################################################################
+	-->
+
+	<div class="divider"></div>
+	<div id="about-section" class="section">
+		<h4>Gallery</h4>
+
+		<div class="row">
+
+			<div class="col s12 m12">
+					<?php
+						$columnArray = array(
+							array("1" => "images/gallery/1.jpg", "2" => "images/gallery/2.jpg"),
+							array("3" => "images/gallery/3.jpg", "4" => "images/gallery/4.jpg"),
+							array("5" => "images/gallery/5.jpg", "6" => "images/gallery/6.jpg"),
+							array("7" => "images/gallery/7.jpg", "8" => "images/gallery/8.jpg")
+						);
+						echo("<div class=\"photo-grid-row\">");
+						foreach ($columnArray as $photoArray) {
+							echo("<div class=\"photo-grid-column\">");
+							foreach ($photoArray as $link => $imgLink) {
+								echo("<img class=\"materialboxed\" src=\"" . $imgLink . "\" style=\"width:100%\">");
+								//echo("<img src=\"" . $imgLink . "\" style=\"width:100%\">");
+							}
+							echo("</div>");
+						}
+						echo("</div>");
+					?>
+			</div>
+
+		</div>
+	</div>
 
 <!--
 ##### PRICE

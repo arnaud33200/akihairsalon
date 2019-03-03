@@ -10,6 +10,10 @@ function init() {
 		windowResizeEvent();
 	};
 
+	document.addEventListener('DOMContentLoaded', function() {
+	    var elems = document.querySelectorAll('.materialboxed');
+	    var instances = M.Materialbox.init(elems, options);
+	  });
 
 	// Initialize collapse button
 	$('.button-collapse').sideNav({
@@ -25,7 +29,6 @@ function init() {
 
 	$(document).ready(function() {
 		windowResizeEvent();
-
 
 		$('.modal').modal();
 
