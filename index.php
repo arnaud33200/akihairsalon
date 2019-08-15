@@ -9,7 +9,6 @@
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
 	  ga('create', 'UA-106189539-1', 'auto');
 	  ga('send', 'pageview');
 	</script>
@@ -67,48 +66,35 @@
 	</script>
 
 	<script>
-
 	function initMap() {
 		var colorMap1 = '#9e9e9e';
 var colorMapBackground = '#f0f4c3';
 var colorMapBuilding1 = '#dce775';
 var colorMapBuilding2 = '#e6ee9c';
-
 var styles = [
-
 // hide store arounds
   // { featureType: 'poi.business', stylers: [{visibility: 'off'}] },
   // { elementType: 'labels.icon', stylers: [{visibility: 'off'}] },
-
 // change map colors
   { elementType: 'geometry', stylers: [{color: colorMapBackground}] },
-
   { elementType: 'labels.text.fill', stylers: [{color: '#616161'}] },
   { elementType: 'labels.text.stroke', stylers: [{color: colorMapBackground}] },
-
   { featureType: 'administrative.land_parcel', elementType: 'labels.text.fill', stylers: [{color: '#bdbdbd'}] },
-
   { featureType: 'poi', elementType: 'geometry', stylers: [{color: colorMapBuilding1}] },
   { featureType: 'poi', elementType: 'labels.text.fill', stylers: [{color: '#757575'}] },
   { featureType: 'poi.park', elementType: 'geometry', stylers: [{color: colorMapBuilding2}] },
   { featureType: 'poi.park', elementType: 'labels.text.fill', stylers: [{color: colorMap1}] },
-
   { featureType: 'road', elementType: 'geometry', stylers: [{color: '#ffffff'}] },
   { featureType: 'road.arterial', elementType: 'labels.text.fill', stylers: [{color: '#757575'}] },
   { featureType: 'road.highway', elementType: 'geometry', stylers: [{color: '#dadada'}] },
   { featureType: 'road.highway', elementType: 'labels.text.fill', stylers: [{color: '#616161'}] },
   { featureType: 'road.local', elementType: 'labels.text.fill', stylers: [{color: colorMap1}] },
-
   { featureType: 'transit.line', elementType: 'geometry', stylers: [{color: colorMapBuilding2}] },
   { featureType: 'transit.station', elementType: 'geometry', stylers: [{color: colorMapBuilding1}] },
-
   { featureType: 'water', elementType: 'geometry', stylers: [{color: '#c9c9c9'}] },
   { featureType: 'water', elementType: 'labels.text.fill', stylers: [{color: colorMap1}]}
 ];
-
-
 		var latlng = new google.maps.LatLng(39.305, -76.617);
-
 		// var position = new google.maps.LatLng(43.655239, -79.380248);
 		var positionMap = new google.maps.LatLng(43.655805, -79.380559);
 		var position = new google.maps.LatLng(43.654878, -79.379203);
@@ -133,7 +119,6 @@ var styles = [
 </script>
 
 	<style type="text/css">
-
 		@font-face {
 			font-family: 'myfont';
 			/*src: url('fonts/melanie-bt-roman.ttf'); */
@@ -143,7 +128,6 @@ var styles = [
 			/*src: url('fonts/Distant_Stroke.otf');  */
 			src: url('fonts/Distant_Stroke_Medium.otf');
 		}
-
 	</style>
 
 <a id="scroll-up-button" class="btn-floating btn-large waves-effect waves-light blue-grey darken-3" onclick="scrollToTopPage()" style="position: fixed; bottom: 10px; right: 10px; display: none; z-index: 1000;"><i class="material-icons">arrow_upward</i></a>
@@ -157,11 +141,11 @@ var styles = [
 
 			<div id="desktop-menu-buttons">
 				<ul id="nav-mobile" class="left">
-					<!-- <li><a class="white-text" onclick="scrollToAbout()">About</a></li> -->
-					<!-- <li><a class="white-text" onclick="scrollToPrice()">Prices</a></li> -->
-					<!-- <li><a class="white-text" onclick="scrollToHours()">Hours</a></li> -->
-					<!-- <li><a class="white-text" onclick="scrollToLocation()">Location</a></li> -->
-					<!-- <li><a class="white-text" onclick="scrollToContact()">Contact</a></li> -->
+					<li><a class="white-text" onclick="scrollToAbout()">About</a></li>
+					<li><a class="white-text" onclick="scrollToPrice()">Prices</a></li>
+					<li><a class="white-text" onclick="scrollToHours()">Hours</a></li>
+					<li><a class="white-text" onclick="scrollToLocation()">Location</a></li>
+					<li><a class="white-text" onclick="scrollToContact()">Contact</a></li>
 				</ul>
 			</div>
 
@@ -188,12 +172,12 @@ var styles = [
 		<a class="waves-effect white-text" onclick="scrollToAbout()">About</a>
 	</li>
 
-	<!-- <li><a class="waves-effect white-text" onclick="scrollToPrice()">Prices</a></li> -->
-	<!-- <li><a class="waves-effect white-text" onclick="scrollToHours()">Hours</a></li> -->
-	<!-- <li><a class="waves-effect white-text" onclick="scrollToLocation()">Location</a></li> -->
-	<!-- <li><a class="waves-effect white-text" onclick="scrollToContact()">Contact</a></li> -->
+	<li><a class="waves-effect white-text" onclick="scrollToPrice()">Prices</a></li>
+	<li><a class="waves-effect white-text" onclick="scrollToHours()">Hours</a></li>
+	<li><a class="waves-effect white-text" onclick="scrollToLocation()">Location</a></li>
+	<li><a class="waves-effect white-text" onclick="scrollToContact()">Contact</a></li>
 	<li><div class="divider"></div></li>
-	<!-- <li><a class="waves-effect white-text" onclick="openBookeo()">Booking</a></li> -->
+	<li><a class="waves-effect white-text" onclick="openBookeo()">Booking</a></li>
 	<li><a class="waves-effect white-text" onclick="openFacebook()">Facebook</a></li>
 	<li><a class="waves-effect white-text" onclick="openInstagram()">Instagram</a></li>
 </ul>
@@ -213,34 +197,34 @@ var styles = [
 	</div>
 
 <!-- BOOK ONLINE BUTTON -->
-	<!-- <div style="text-align: center;">
+	<div style="text-align: center;">
 		<div class="social-icn-group">
 		<a class="waves-effect waves-light btn grey-text text-darken-3 white" style="border: 1px solid #424242;" onclick="openBookeo()">BOOK ONLINE</a>
 		</div>
-	</div> -->
+	</div>
 
 
 
 	<!-- BUTTON FOR SECTION NAVIGATION -->
 
-	<!-- <div class="row" style="max-width: 450px;"> -->
-		<!-- <div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;"> -->
-			<!-- <a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToAbout()" style="width: 100%;">About</a> -->
-		<!-- </div> -->
+	<div class="row" style="max-width: 450px;">
+		<div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
+			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToAbout()" style="width: 100%;">About</a>
+		</div>
 
-		<!-- <div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
+		<div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
 			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToPrice()" style="width: 100%;">Prices</a>
-		</div> -->
-		<!-- <div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
+		</div>
+		<div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
 			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToHours()" style="width: 100%;">Hours</a>
-		</div> -->
-		<!-- <div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;"> -->
-			<!-- <a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToLocation()" style="width: 100%;">Location</a> -->
-		<!-- </div> -->
-		<!-- <div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
+		</div>
+		<div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
+			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToLocation()" style="width: 100%;">Location</a>
+		</div>
+		<div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
 			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToContact()" style="width: 100%;">Contact</a>
-		</div> -->
-	<!-- </div> -->
+		</div>
+	</div>
 
 <!--
 ##### ABOUT
@@ -307,7 +291,6 @@ var styles = [
 							array_push($columnArray, $column);
 						}
 						array_push($columnArray[0], $imageArray[12]);
-
 						echo("<div class=\"photo-grid-row\">");
 						foreach ($columnArray as $photoArray) {
 							echo("<div class=\"photo-grid-column\">");
@@ -329,71 +312,63 @@ var styles = [
 #####################################################################
 -->
 
-<!-- <div id="price-section" class="divider"></div>
+<div id="price-section" class="divider"></div>
 <div class="section">
-	<h4>Prices</h4> -->
+	<h4>Prices</h4>
 
 	<?php
-		// include 'php/HairPriceItem.php';
-		// $categoryArray = HairPriceItem::makeHairPriceItemArray($websiteInfoString);
+		include 'php/HairPriceItem.php';
+		$categoryArray = HairPriceItem::makeHairPriceItemArray($websiteInfoString);
 	?>
 
-	<!-- <div class="row">
+	<div class="row">
 		<div class="col m6 s12">
-
 			<h5>CUT</h5>
-			<table class="price-table">	 -->
+			<table class="price-table">	
 				<?php
-					// $itemArray = $categoryArray["Cut"];
-					// foreach ($itemArray as $priceItem) {
-					// 	echo($priceItem->getStringTableRow());
-					// }
+					$itemArray = $categoryArray["Cut"];
+					foreach ($itemArray as $priceItem) {
+						echo($priceItem->getStringTableRow());
+					}
 				?>
-			<!-- </table>
-
+			</table>
 			<h5>STYLING</h5>
-			<table class="price-table"> -->
+			<table class="price-table">
 				<?php
-					// $itemArray = $categoryArray["Styling"];
-					// foreach ($itemArray as $priceItem) {
-					// 	echo($priceItem->getStringTableRow());
-					// }
+					$itemArray = $categoryArray["Styling"];
+					foreach ($itemArray as $priceItem) {
+						echo($priceItem->getStringTableRow());
+					}
 				?>
-			<!-- </table>
-
+			</table>
 		</div>
-
 		<div class="col m6 s12">
-
 			<h5>COLOURING </h5>
-			<table class="price-table"> -->
+			<table class="price-table">
 				<?php
-					// $itemArray = $categoryArray["Colouring"];
-					// foreach ($itemArray as $priceItem) {
-					// 	echo($priceItem->getStringTableRow());
-					// }
+					$itemArray = $categoryArray["Colouring"];
+					foreach ($itemArray as $priceItem) {
+						echo($priceItem->getStringTableRow());
+					}
 				?>
-<!-- 			</table>
+			</table>
 		</div>
 	</div>
-
 	<div align="center">
 		<a class="waves-effect waves-light btn grey-text text-darken-3 lime accent-2" style="margin-top: 20px; margin-bottom: 30px;" onclick="openBookeo()">
 			See More Price
 		</a>
-
 	</div>
-</div> -->
+</div>
 
 <!--
 ##### HOURS
 #####################################################################
 -->
 
-<!-- <div id="hours-section" class="divider"></div>
+<div id="hours-section" class="divider"></div>
 <div class="section">
 	<h4>Hours</h4>
-
 	<div class="orange-text darken-4" style="background-color: #ffffff">
          	<i class="material-icons" style="position: absolute;">warning</i>
          	<p style="top: 17px;left: 50px;right: 5px; margin-left: 40px;margin-right: 30px;">
@@ -401,27 +376,23 @@ var styles = [
          		May 2018 to spring 2019
 			</p>
   	</div>
-
 	<ul style="opacity: 0.3;">
 		<li style="list-style-type: circle;">Wednesday to Friday (11am to 7pm)</li>
 		<li style="list-style-type: circle;">Saturday (10am to 6pm)</li>
 	</ul>
 	<p style=" margin-left: 30px; color: #b1b1b1; font-style: italic;">Hours may vary. Please inquire about availability with the stylist.</p>
-</div> -->
+</div>
 
 <!--
 ##### LOCATION
 #####################################################################
 -->
 
-<!-- <div id="location-section" class="divider"></div>
+<div id="location-section" class="divider"></div>
 <div class="section">
 	<h4>Location & Info</h4>
-
 	<div class="row">
-
 		<div class="col push-l7 l5 s12" style="margin-bottom: 40px;">
-
 			<div style="">
 				<p>Kamiya Hairdressing</p>
 				<ul>
@@ -430,30 +401,25 @@ var styles = [
 					<li style="list-style-type: circle;">Easy access to public parking.</li>
 				</ul>
 			</div>
-
 			<div align="center">
 				<a class="waves-effect waves-light btn grey-text text-darken-3 lime accent-2"
 				onclick="openKamiya()" style="display: inherit; width: 250px;">
 					Website</a>
 				</div>
 			</div>
-
 			<div id="map" class="col pull-l5 l7 s12" style="height:300px;"></div>
-
 			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMAxQHRREX3zmqNnk5_UFxDomZbgIqpjA&callback=initMap" async defer></script>
 		</div>
-
-	</div> -->
+	</div>
 
 	<!--
 ##### CONTACT
 #####################################################################
 -->
 
-<!-- <div id="contact-section" class="divider"></div>
+<div id="contact-section" class="divider"></div>
 <div class="section">
 	<h4>Contact</h4>
-
 	 <ul>
       <li><div class="valign-center"><i class="smaller material-icons">perm_phone_msg</i><span>
       <a href="tel:647-381-1245">(647) 381-1245 (text)</a>
@@ -462,14 +428,10 @@ var styles = [
 	<a href="mailto:akiimamura1021@gmail.com">akiimamura1021@gmail.com</a>
 	<span></div></li>
     </ul>
-
-
     <a id="send-message-button" class="waves-effect waves-light btn modal-trigger grey-text text-darken-3 lime accent-2" href="#modal1">Send Message</a>
-
 	<div id="modal1" class="modal modal-fixed-footer">
 		<div class="modal-content">
 		<h5>Send Message</h5>
-
 			<div class="row">
 				<form class="col s12 text-blue" name="message-form" id="message-form">
 					<div class="row">
@@ -488,28 +450,26 @@ var styles = [
 					</div>
 				</form>
 			</div>
-
 		</div>
 		<div class="modal-footer">
 			<a class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
 			<a class="modal-action waves-effect waves-green btn-flat" onclick="sendMessage()">Send</a>
 		</div>
 	</div>
-
-</div> -->
+</div>
 
 <!--
 ##########################################################################
 -->
 
-<!-- <div id="Cancellation-policy-section" class="divider"></div>
+<div id="Cancellation-policy-section" class="divider"></div>
 <div class="section">
 	<h4>Cancellation policy</h4>
 	<blockquote style="border-left: 5px solid #eeff41;">
 		<p>Out of courtesy, all appointments have a minimum 24-hour cancellation policy.</p>
 		<p>Customers who are late for their appointment may lose their reservation. Please be on time.</p>
 	</blockquote>
-</div> -->
+</div>
 
 <!-- FOOTTER -->
 
@@ -543,7 +503,5 @@ var styles = [
 <!-- </div> -->
 
 </body>
-
-
 
 </html>
