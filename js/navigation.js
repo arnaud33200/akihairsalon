@@ -39,8 +39,9 @@ function scrollToPosition(position) {
 function openInstagram() { openUrl('https://www.instagram.com/akihairstylist'); }
 function openFacebook() { openUrl('https://www.facebook.com/akiimamurahairstylist/'); }
 function openBookeo() { openUrl('http://bookeo.com/akiimamura'); }
+function openKamiya() { openUrl('http://kamiyahairdressing.ca'); }
 
 function openUrl(url) {
 	var win = window.open(url, '_blank');
-  	win.focus();
+	win.focus();
 }

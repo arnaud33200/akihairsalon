@@ -49,6 +49,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 	<link type="text/css" rel="stylesheet" href="css/style.css"/>
+	<link type="text/css" rel="stylesheet" href="css/photo_grid.css"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
@@ -75,7 +76,7 @@ var colorMapBuilding2 = '#e6ee9c';
 
 var styles = [
 
-// hide store arounds 
+// hide store arounds
   // { featureType: 'poi.business', stylers: [{visibility: 'off'}] },
   // { elementType: 'labels.icon', stylers: [{visibility: 'off'}] },
 
@@ -107,10 +108,13 @@ var styles = [
 
 
 		var latlng = new google.maps.LatLng(39.305, -76.617);
-		var position = new google.maps.LatLng(43.655239, -79.380248);
+
+		// var position = new google.maps.LatLng(43.655239, -79.380248);
 		var positionMap = new google.maps.LatLng(43.655805, -79.380559);
+		var position = new google.maps.LatLng(43.654878, -79.379203);
+		var positionMap = new google.maps.LatLng(43.6557241,-79.3811009);
 		var map = new google.maps.Map(document.getElementById('map'), {
-			zoom: 17,
+			zoom: 16,
 			center: positionMap
 		});
 		// map.setOptions({styles: styles['default']});
@@ -118,8 +122,9 @@ var styles = [
 		var marker = new google.maps.Marker({
 			position: position,
 			map: map,
-			title: 'Aki Imamura',
-			url: "https://www.google.ca/maps/place/Aki+Imamura+Hairstylist/@43.6552185,-79.3844401,16z/data=!4m8!1m2!2m1!1saki+!3m4!1s0x89d4cb34cc094ca7:0xc8794f493deb5022!8m2!3d43.6552089!4d-79.3800547"
+			title: 'Kamiya Hairsalon',
+			url: "https://www.google.com/maps/place/Kamiya+Hairdressing/@43.6548872,-79.3804684,17z/data=!3m1!4b1!4m5!3m4!1s0x882ad58abe8bded7:0xdb9136e8ce897def!8m2!3d43.6548851!4d-79.3792542"
+			// url: "https://www.google.ca/maps/place/Aki+Imamura+Hairstylist/@43.6552185,-79.3844401,16z/data=!4m8!1m2!2m1!1saki+!3m4!1s0x89d4cb34cc094ca7:0xc8794f493deb5022!8m2!3d43.6552089!4d-79.3800547"
 		});
 		google.maps.event.addListener(marker, 'click', function() {
 			openUrl(this.url);
@@ -143,49 +148,52 @@ var styles = [
 
 <a id="scroll-up-button" class="btn-floating btn-large waves-effect waves-light blue-grey darken-3" onclick="scrollToTopPage()" style="position: fixed; bottom: 10px; right: 10px; display: none; z-index: 1000;"><i class="material-icons">arrow_upward</i></a>
 
-<nav id="top-navigation-bar" style="position: fixed; z-index: 1000; display: none;">
-	<div class="nav-wrapper blue-grey darken-3">
-		<!-- <div class="nav-wrapper yellow lighten-3 "> -->
-		<a onclick="scrollToTopPage()" class="brand-logo right white-text" style="font-family: 'myFont';font-size: 40px; right: 1.5rem;">Aki Imamura</a>
+<div style="width: 100%; position: fixed; z-index: 1000;">
 
-		<div id="desktop-menu-buttons">
-			<ul id="nav-mobile" class="left">
-				<li><a class="white-text" onclick="scrollToAbout()">About</a></li>
-				<li><a class="white-text" onclick="scrollToPrice()">Prices</a></li>
-				<li><a class="white-text" onclick="scrollToHours()">Hours</a></li>
-				<li><a class="white-text" onclick="scrollToLocation()">Location</a></li>
-				<li><a class="white-text" onclick="scrollToContact()">Contact</a></li>
-			</ul>
-		</div>
-		
-		<div id="mobile-menu-buttons">
-			<ul id="nav-mobile" class="left">
-				<li>
-					<a id="menu-button" data-activates="slide-out" class="white-text"><i class="material-icons">menu</i></a>
-				</li>
-			</ul>
-		</div>
+	<nav id="top-navigation-bar" style="display: none;">
+		<div class="nav-wrapper blue-grey darken-3">
+			<!-- <div class="nav-wrapper yellow lighten-3 "> -->
+			<a onclick="scrollToTopPage()" class="brand-logo right white-text" style="font-family: 'myFont';font-size: 40px; right: 1.5rem;">Aki Imamura</a>
 
-	</div>
-	<div class="nav-content">
-		
-	</div>
-</nav>
+			<div id="desktop-menu-buttons">
+				<ul id="nav-mobile" class="left">
+					<!-- <li><a class="white-text" onclick="scrollToAbout()">About</a></li> -->
+					<!-- <li><a class="white-text" onclick="scrollToPrice()">Prices</a></li> -->
+					<!-- <li><a class="white-text" onclick="scrollToHours()">Hours</a></li> -->
+					<!-- <li><a class="white-text" onclick="scrollToLocation()">Location</a></li> -->
+					<!-- <li><a class="white-text" onclick="scrollToContact()">Contact</a></li> -->
+				</ul>
+			</div>
+
+			<div id="mobile-menu-buttons">
+				<ul id="nav-mobile" class="left">
+					<li>
+						<a id="menu-button" data-activates="slide-out" class="white-text"><i class="material-icons">menu</i></a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+		<div class="nav-content">
+
+		</div>
+	</nav>
+
+</div>
 
 <!-- Side Out Menu -->
 
 <ul id="slide-out" class="side-nav blue-grey darken-2" style="">
-	<!-- <ul id="slide-out" class="side-nav yellow lighten-2" style=""> -->
 	<li style="margin-top: 60px;">
 		<a class="waves-effect white-text" onclick="scrollToAbout()">About</a>
 	</li>
-	
-	<li><a class="waves-effect white-text" onclick="scrollToPrice()">Prices</a></li>
-	<li><a class="waves-effect white-text" onclick="scrollToHours()">Hours</a></li>
-	<li><a class="waves-effect white-text" onclick="scrollToLocation()">Location</a></li>
-	<li><a class="waves-effect white-text" onclick="scrollToContact()">Contact</a></li>
+
+	<!-- <li><a class="waves-effect white-text" onclick="scrollToPrice()">Prices</a></li> -->
+	<!-- <li><a class="waves-effect white-text" onclick="scrollToHours()">Hours</a></li> -->
+	<!-- <li><a class="waves-effect white-text" onclick="scrollToLocation()">Location</a></li> -->
+	<!-- <li><a class="waves-effect white-text" onclick="scrollToContact()">Contact</a></li> -->
 	<li><div class="divider"></div></li>
-	<li><a class="waves-effect white-text" onclick="openBookeo()">Online Booking</a></li>
+	<!-- <li><a class="waves-effect white-text" onclick="openBookeo()">Booking</a></li> -->
 	<li><a class="waves-effect white-text" onclick="openFacebook()">Facebook</a></li>
 	<li><a class="waves-effect white-text" onclick="openInstagram()">Instagram</a></li>
 </ul>
@@ -194,55 +202,49 @@ var styles = [
 
 <div class="row" style="padding-top: 40px;"><div class="col s12 m8 offset-m2">
 
-	<!-- <div style> -->
-	<!-- </div> -->
-
 	<h1 id="main-title" style="font-family: 'myfont';text-align: center;font-size: 100px;">Aki Imamura</h1>
 
 	<div style="text-align: center;">
 		<div class="social-icn-group">
-			<a class="icn-social bookeo" target="_blank" onclick="openBookeo()"></a>
+			<!-- <a class="icn-social bookeo" target="_blank" onclick="openBookeo()"></a> -->
 			<a class="icn-social facebook" target="_blank" onclick="openFacebook()"></a>
 			<a class="icn-social instagram" target="_blank" onclick="openInstagram()"></a>
 		</div>
 	</div>
 
-	<div style="text-align: center;">
+<!-- BOOK ONLINE BUTTON -->
+	<!-- <div style="text-align: center;">
 		<div class="social-icn-group">
 		<a class="waves-effect waves-light btn grey-text text-darken-3 white" style="border: 1px solid #424242;" onclick="openBookeo()">BOOK ONLINE</a>
 		</div>
-	</div>
+	</div> -->
 
-	
+
 
 	<!-- BUTTON FOR SECTION NAVIGATION -->
 
-	<div class="row" style="max-width: 450px;">
-		<div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
-			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToAbout()" style="width: 100%;">About</a>
-			<!-- <a class="waves-effect waves-light btn  grey darken-1" onclick="scrollToAbout()" style="width: 100%;">About</a> -->
-		</div>
-		
-		<div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
+	<!-- <div class="row" style="max-width: 450px;"> -->
+		<!-- <div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;"> -->
+			<!-- <a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToAbout()" style="width: 100%;">About</a> -->
+		<!-- </div> -->
+
+		<!-- <div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
 			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToPrice()" style="width: 100%;">Prices</a>
-			<!-- <a class="waves-effect waves-light btn  grey darken-1" onclick="scrollToPrice()" style="width: 100%;">Price</a> -->
-		</div>
-		<div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
+		</div> -->
+		<!-- <div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
 			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToHours()" style="width: 100%;">Hours</a>
-			<!-- <a class="waves-effect waves-light btn  grey darken-1" onclick="scrollToHours()" style="width: 100%;">Hours</a> -->
-		</div>
-		<div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
-			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToLocation()" style="width: 100%;">Location</a>
-			<!-- <a class="waves-effect waves-light btn  grey darken-1" onclick="scrollToLocation()" style="width: 100%;">Location</a> -->
-		</div>
-		<!-- <div class="col s6 offset-s3" align="center" style="margin-bottom: 10px; text-align: center;">
+		</div> -->
+		<!-- <div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;"> -->
+			<!-- <a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToLocation()" style="width: 100%;">Location</a> -->
+		<!-- </div> -->
+		<!-- <div class="col s6" align="center" style="margin-bottom: 10px; text-align: center;">
 			<a class="waves-effect waves-light btn  grey-text text-darken-3 lime accent-2" onclick="scrollToContact()" style="width: 100%;">Contact</a>
 		</div> -->
-	</div>
+	<!-- </div> -->
 
-<!-- 
+<!--
 ##### ABOUT
-##################################################################### 
+#####################################################################
 -->
 
 <div class="divider"></div>
@@ -255,10 +257,10 @@ var styles = [
 
 			<p>Aki is a creative stylist whose passion for hair began in 2004 in Japan, where she both trained and taught styling.</p>
 
-			<p>She came to Toronto to expand her repertoire of styles and to bring her own creative style to Canada. After a few years of working in a salon in Toronto, she decided to venture out and start her own business. She prides herself on providing a specialized cut for each client and cares immensely about the details and textures of her cuts, and it shows! Her focus is on having all her customers look their best. She thanks all her past clients for their business and is always open to receiving new ones.</p>
+			<p>She came to Toronto to expand her repertoire of styles and to bring her own creative style to Canada. She prides herself on providing a specialized cut for each client and cares immensely about the details and textures of her cuts, and it shows! Her focus is on having all her customers look their best. She thanks all her past clients for their business and is always open to receiving new ones.</p>
 
 			<ul>
-				<li style="list-style-type: circle;">Bookeo: <a href-"" target="_blank" onclick="openBookeo()">Online Booking</a></li>
+				<!-- <li style="list-style-type: circle;">Bookeo: <a href-"" target="_blank" onclick="openBookeo()">Online Booking</a></li> -->
 				<li style="list-style-type: circle;">Facebook: <a href-"" target="_blank" onclick="openFacebook()">@akiimamurahairstylist</a></li>
 				<li style="list-style-type: circle;">Instagram: <a href-"" target="_blank" onclick="openInstagram()">@akihairstylist</a></li>
 			</ul>
@@ -267,36 +269,11 @@ var styles = [
 
 		<div class="col m4 s12" style="text-align: center">
 
-			<div class="z-depth-2" style="width:100%; height:200px; display: inline-block; background-image: url('images/longProfile2.jpg'); background-repeat: no-repeat; background-attachment: inherit; background-position: center; min-width: 200px;border-radius: 2px;">	
+			<div class="z-depth-2" style="width:100%; height:200px; display: inline-block; background-image: url('images/longProfile2.jpg'); background-repeat: no-repeat; background-attachment: inherit; background-position: center; min-width: 200px;border-radius: 2px;">
 			</div>
 		</div>
 
-		<div class="col s12" style="text-align: center; margin-top: 50px; margin-bottom: -30px;" >
-			<h5>Gallery</h5>
-		</div>
 
-		<div class="col s12">
-	
-			<div class="carousel" style="height: 300px;">
-
-				<?php
-					$photoArray = array (
-						"1" => "images/gallery/1.jpg",
-						"2" => "images/gallery/2.jpg",
-						"3" => "images/gallery/3.jpg",
-						"4" => "images/gallery/4.jpg",
-						"5" => "images/gallery/5.jpg",
-						"6" => "images/gallery/6.jpg",
-						"7" => "images/gallery/7.jpg",
-						"8" => "images/gallery/8.jpg"
-					);
-					foreach ($photoArray as $link => $imgLink) {
-						echo("<a class=\"carousel-item\"><img class=\"materialboxed\" width=\"200px\" src=\"" . $imgLink . "\"></a>");
-					}	
-				?>	
-  			</div>
-
-		</div>
 
 		</div>
 
@@ -304,62 +281,99 @@ var styles = [
 
 	<!-- </div> -->
 
-<!-- 
+	<!--
+	##### ABOUT
+	#####################################################################
+	-->
+
+	<div class="divider"></div>
+	<div id="about-section" class="section">
+		<h4>Gallery</h4>
+
+		<div class="row">
+
+			<div class="col s12 m12">
+					<?php
+						$imageArray = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
+						shuffle($imageArray);
+						$columnArray = array();
+						for ($i = 0; $i < 4; $i++) {
+    					$column = array();
+							for ($j = 0; $j < 3; $j++) {
+								$index = $j + (3 * $i);
+								$image = $imageArray[$index];
+								array_push($column, $image);
+							}
+							array_push($columnArray, $column);
+						}
+						array_push($columnArray[0], $imageArray[12]);
+
+						echo("<div class=\"photo-grid-row\">");
+						foreach ($columnArray as $photoArray) {
+							echo("<div class=\"photo-grid-column\">");
+							foreach ($photoArray as $number) {
+								$imgLink = "images/gallery/" . $number . ".jpg";
+								echo("<img class=\"materialboxed\" src=\"" . $imgLink . "\" style=\"width:100%\">");
+							}
+							echo("</div>");
+						}
+						echo("</div>");
+					?>
+			</div>
+
+		</div>
+	</div>
+
+<!--
 ##### PRICE
-##################################################################### 
+#####################################################################
 -->
 
-<div id="price-section" class="divider"></div>
+<!-- <div id="price-section" class="divider"></div>
 <div class="section">
-	<h4>Prices</h4>
+	<h4>Prices</h4> -->
 
 	<?php
-
-		// ini_set( 'error_reporting', E_ALL );
-		// ini_set( 'display_errors', true );
-
-		include 'php/HairPriceItem.php';
-
-		$categoryArray = HairPriceItem::makeHairPriceItemArray($websiteInfoString);
-
+		// include 'php/HairPriceItem.php';
+		// $categoryArray = HairPriceItem::makeHairPriceItemArray($websiteInfoString);
 	?>
 
-	<div class="row">
+	<!-- <div class="row">
 		<div class="col m6 s12">
 
 			<h5>CUT</h5>
-			<table class="price-table">		
+			<table class="price-table">	 -->
 				<?php
-					$itemArray = $categoryArray["Cut"];
-					foreach ($itemArray as $priceItem) {
-						echo($priceItem->getStringTableRow());
-					}	
+					// $itemArray = $categoryArray["Cut"];
+					// foreach ($itemArray as $priceItem) {
+					// 	echo($priceItem->getStringTableRow());
+					// }
 				?>
-			</table>
+			<!-- </table>
 
 			<h5>STYLING</h5>
-			<table class="price-table">
+			<table class="price-table"> -->
 				<?php
-					$itemArray = $categoryArray["Styling"];
-					foreach ($itemArray as $priceItem) {
-						echo($priceItem->getStringTableRow());
-					}	
+					// $itemArray = $categoryArray["Styling"];
+					// foreach ($itemArray as $priceItem) {
+					// 	echo($priceItem->getStringTableRow());
+					// }
 				?>
-			</table>
+			<!-- </table>
 
 		</div>
 
 		<div class="col m6 s12">
 
 			<h5>COLOURING </h5>
-			<table class="price-table">
+			<table class="price-table"> -->
 				<?php
-					$itemArray = $categoryArray["Colouring"];
-					foreach ($itemArray as $priceItem) {
-						echo($priceItem->getStringTableRow());
-					}	
+					// $itemArray = $categoryArray["Colouring"];
+					// foreach ($itemArray as $priceItem) {
+					// 	echo($priceItem->getStringTableRow());
+					// }
 				?>
-			</table>
+<!-- 			</table>
 		</div>
 	</div>
 
@@ -369,75 +383,78 @@ var styles = [
 		</a>
 
 	</div>
+</div> -->
 
-		
-
-</div>
-
-<!-- 
-##### HOURS 
-##################################################################### 
+<!--
+##### HOURS
+#####################################################################
 -->
 
-<div id="hours-section" class="divider"></div>
+<!-- <div id="hours-section" class="divider"></div>
 <div class="section">
 	<h4>Hours</h4>
-	<ul>
+
+	<div class="orange-text darken-4" style="background-color: #ffffff">
+         	<i class="material-icons" style="position: absolute;">warning</i>
+         	<p style="top: 17px;left: 50px;right: 5px; margin-left: 40px;margin-right: 30px;">
+         		Due to maternity leave, the hair salon will be closed</br>
+         		May 2018 to spring 2019
+			</p>
+  	</div>
+
+	<ul style="opacity: 0.3;">
 		<li style="list-style-type: circle;">Wednesday to Friday (11am to 7pm)</li>
 		<li style="list-style-type: circle;">Saturday (10am to 6pm)</li>
 	</ul>
 	<p style=" margin-left: 30px; color: #b1b1b1; font-style: italic;">Hours may vary. Please inquire about availability with the stylist.</p>
-</div>
+</div> -->
 
-<!-- 
+<!--
 ##### LOCATION
-##################################################################### 
+#####################################################################
 -->
 
-<div id="location-section" class="divider"></div>
+<!-- <div id="location-section" class="divider"></div>
 <div class="section">
-	<h4>Location</h4>
+	<h4>Location & Info</h4>
 
 	<div class="row">
 
 		<div class="col push-l7 l5 s12" style="margin-bottom: 40px;">
 
 			<div style="">
-				<p>261A Yonge St., Unit 2F (Spellbound Hair)</p>
+				<p>Kamiya Hairdressing</p>
 				<ul>
-					<li style="list-style-type: circle;">Located right next to the Ed Mirvish Theatre.</li>
-					<li style="list-style-type: circle;">TTC accessible.  Only a short walk from Dundas Station.</li>
+					<li style="list-style-type: circle;">220 Victoria St, M5B 2R6</li>
+					<li style="list-style-type: circle;">Short walk from Dundas Station.</li>
 					<li style="list-style-type: circle;">Easy access to public parking.</li>
 				</ul>
 			</div>
 
 			<div align="center">
-
-				<a class="waves-effect waves-light btn grey-text text-darken-3 lime accent-2" onclick="openBookeo()" style="display: inherit;     width: 250px;">
-					<!-- <a class="waves-effect waves-light btn grey darken-1 text-white" style="display: inherit;"> -->
-					Make Reservation</a>
+				<a class="waves-effect waves-light btn grey-text text-darken-3 lime accent-2"
+				onclick="openKamiya()" style="display: inherit; width: 250px;">
+					Website</a>
 				</div>
 			</div>
 
 			<div id="map" class="col pull-l5 l7 s12" style="height:300px;"></div>
 
-			<!-- INIT MAP SCRIPT AFTER MAP DIV TO AVOID BLANK LOADING ISSUE -->
 			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMAxQHRREX3zmqNnk5_UFxDomZbgIqpjA&callback=initMap" async defer></script>
 		</div>
 
-	</div>
+	</div> -->
 
-	<!-- 
+	<!--
 ##### CONTACT
-##################################################################### 		
+#####################################################################
 -->
 
-<div id="contact-section" class="divider"></div>
+<!-- <div id="contact-section" class="divider"></div>
 <div class="section">
 	<h4>Contact</h4>
 
 	 <ul>
-
       <li><div class="valign-center"><i class="smaller material-icons">perm_phone_msg</i><span>
       <a href="tel:647-381-1245">(647) 381-1245 (text)</a>
       </span></div></li>
@@ -446,10 +463,9 @@ var styles = [
 	<span></div></li>
     </ul>
 
-  
+
     <a id="send-message-button" class="waves-effect waves-light btn modal-trigger grey-text text-darken-3 lime accent-2" href="#modal1">Send Message</a>
 
-	<!-- Modal Structure -->
 	<div id="modal1" class="modal modal-fixed-footer">
 		<div class="modal-content">
 		<h5>Send Message</h5>
@@ -480,38 +496,38 @@ var styles = [
 		</div>
 	</div>
 
-</div>
+</div> -->
 
-<!-- 
-########################################################################## 
+<!--
+##########################################################################
 -->
 
-<div id="Cancellation-policy-section" class="divider"></div>
+<!-- <div id="Cancellation-policy-section" class="divider"></div>
 <div class="section">
 	<h4>Cancellation policy</h4>
 	<blockquote style="border-left: 5px solid #eeff41;">
 		<p>Out of courtesy, all appointments have a minimum 24-hour cancellation policy.</p>
 		<p>Customers who are late for their appointment may lose their reservation. Please be on time.</p>
 	</blockquote>
-</div>
+</div> -->
 
 <!-- FOOTTER -->
 
 
-</div>	
+</div>
 
 <!-- <div class="row" style="margin-bottom: 0px; opacity: 0.3;"> -->
 	<div class="col s12" style="opacity: 0.3;">
 		<div id="footer-section" class="divider" style="margin: 40px -10px 10px -10px; height: 2px; background-color: #384750;"></div>
 		<div class="row" style="margin-bottom: 0px;">
-			
+
 			<div class="col s6">
-				<footer-left>Aki Imamura Hairstylist 2017</footer-left>
+				<footer-left>Aki Imamura Hairstylist 2019</footer-left>
 
 				<!-- SOCIAL ICONS -->
 				<div style="text-align: left;">
 					<div class="social-icn-group-footer">
-						<a class="icn-social-footer bookeo" target="_blank" onclick="openBookeo()"></a>
+						<!-- <a class="icn-social-footer bookeo" target="_blank" onclick="openBookeo()"></a> -->
 						<a class="icn-social-footer facebook" target="_blank" onclick="openFacebook()"></a>
 						<a class="icn-social-footer instagram" target="_blank" onclick="openInstagram()"></a>
 					</div>
@@ -519,8 +535,8 @@ var styles = [
 			</div>
 
 			<div class="col s6">
-				<footer-dev>Designed & Developed by</footer-dev>
-				<footer-dev>Arnaud Ladoucette</footer-dev>
+				<a href="https://github.com/arnaud33200/akihairsalon" target="_blank"><footer-dev>Developed by</footer-dev>
+				<footer-dev>Arnaud.L</footer-dev></a>
 			</div>
 		</div>
 	</div>
