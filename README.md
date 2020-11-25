@@ -4,8 +4,7 @@ The first version (1.0) has been released on July 15th 2017
 
 # Links
 
-- official website: ~http://aki-imamura.com/~ (master branch)
-  - website turn off
+- official website: http://aki-imamura.com/ (master branch)
 - beta version: http://aki.myartsonline.com/ (dev branch)
 - release note: https://github.com/arnaud33200/akihairsalon/tags 
 
